@@ -1,7 +1,7 @@
 <script lang="ts">
     import { Button } from "$lib/components/ui/button";
     import ArrowUpRight from "@lucide/svelte/icons/arrow-up-right";
-    import Mail from "@lucide/svelte/icons/mail";
+    import MoveRight from "@lucide/svelte/icons/move-right";
     import Icon from "@iconify/svelte";
 
     const categories = [
@@ -174,13 +174,25 @@
     </section>
 
     <section class="not-lg:px-6 pb-24 space-y-5">
-        <h2 class="tracking-tight text-xl sm:text-2xl">Selected Projects</h2>
+        <div class="flex items-center justify-between gap-4">
+            <h2 class="tracking-tight text-xl sm:text-2xl">
+                Selected Projects
+            </h2>
+
+            <a
+                href="/projects"
+                class="text-sm text-muted-foreground hover:text-foreground duration-250 transition-colors inline-flex gap-1 items-center"
+            >
+                <span>View All</span>
+                <MoveRight class="size-4" />
+            </a>
+        </div>
 
         <div class="flex flex-col md:grid md:grid-cols-2 gap-x-3 gap-y-10">
             <article class="space-y-4">
                 <div class="overflow-hidden rounded-xl">
                     <img
-                        src="/images/toolbase-preview-dark.webp"
+                        src="/images/toolbase-preview.webp"
                         alt="ToolBase project preview"
                         class="aspect-4/3 object-cover"
                     />
@@ -188,12 +200,10 @@
                 <div class="leading-snug space-y-2">
                     <p class="text-sm md:text-base font-book md:tracking-tight">
                         ToolBase
-                    </p>
-                    <p
-                        class="text-sm md:text-base text-muted-foreground tracking-tight leading-snug"
-                    >
-                        Personal web app built to manage the technologies I use
-                        within my developer workflow.
+                        <span class="text-muted-foreground">
+                            - Personal web app built to manage the technologies
+                            I use within my developer workflow.
+                        </span>
                     </p>
                 </div>
                 <Button
@@ -208,7 +218,7 @@
             <article class="space-y-4">
                 <div class="overflow-hidden rounded-xl">
                     <img
-                        src="/images/stargazer-preview-dark.webp"
+                        src="/images/stargazer-preview.webp"
                         alt="Stargazer project preview"
                         class="aspect-4/3 object-cover"
                     />
@@ -216,12 +226,10 @@
                 <div class="leading-snug space-y-2">
                     <p class="text-sm md:text-base font-book md:tracking-tight">
                         Stargazer
-                    </p>
-                    <p
-                        class="text-sm md:text-base text-muted-foreground tracking-tight leading-snug"
-                    >
-                        Interactive NASA API hub that allows users to explore
-                        space imagery and data.
+                        <span class="text-muted-foreground">
+                            - Interactive NASA API hub that allows users to
+                            explore space imagery and data.
+                        </span>
                     </p>
                 </div>
                 <Button
@@ -264,15 +272,16 @@
     </section>
 
     <section class="not-lg:px-6 pb-24 space-y-5 text-center">
-        <h2 class="tracking-tight text-xl sm:text-2xl">Contact Me</h2>
-        <p class="text-muted-foreground tracking-tight">
-            If you'd like to get in touch, feel free to reach out through my
-            X/Twitter or via email :)
-        </p>
+        <div class="space-y-4">
+            <h2 class="tracking-tight text-xl sm:text-2xl">Contact Me</h2>
+            <p class="text-muted-foreground tracking-tight">
+                If you'd like to get in touch, feel free to reach out through my
+                X/Twitter or via email :)
+            </p>
+        </div>
 
-        <div class="flex flex-col gap-y-1 w-40 mx-auto">
+        <div class="grid grid-cols-[160px] gap-1 w-fit mx-auto">
             <Button size="lg" href="https://x.com/NotCellium" target="_blank">
-                <Icon icon="simple-icons:x" />
                 <span>X / Twitter</span>
             </Button>
             <Button

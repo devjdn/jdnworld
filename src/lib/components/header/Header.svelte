@@ -1,7 +1,10 @@
-<header class="sticky inset-0">
+<header
+    class="sticky inset-0"
+    style="background-color: oklch(from var(--background) l c h / 0.01);"
+>
     <div
         id="header-blur-backdrop"
-        class="pointer-events-none absolute grid inset-0"
+        class="pointer-events-none absolute grid h-16 inset-0"
         aria-hidden="true"
     >
         <span
@@ -41,13 +44,14 @@
             <span class="">jdn.world</span>
         </a>
 
-        <nav class="hidden">
+        <nav class="not-md:hidden">
             <ul
                 class="flex items-center gap-4 font-book text-sm *:transition-colors *:duration-250 text-muted-foreground *:hover:text-foreground"
             >
-                <li><a href="">About</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Music</a></li>
+                <!-- <li><a href="/about">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/music">Music</a></li> -->
+                <li><a href="https://github.com/devjdn">GitHub</a></li>
             </ul>
         </nav>
     </div>

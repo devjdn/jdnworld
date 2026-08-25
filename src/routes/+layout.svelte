@@ -13,7 +13,7 @@
     <link rel="icon" href={favicon} />
 </svelte:head>
 
-<ModeWatcher defaultMode="dark" />
+<ModeWatcher defaultMode="system" />
 
 <Header />
 
