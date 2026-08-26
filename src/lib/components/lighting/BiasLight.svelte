@@ -2,19 +2,11 @@
     import { onMount } from "svelte";
     import { Tween } from "svelte/motion";
     import { cubicOut } from "svelte/easing";
-    import { mode } from "mode-watcher";
     import type * as THREE_TYPE from "three";
 
     let canvas: HTMLCanvasElement;
     const opacity = new Tween(0, { duration: 2500, easing: cubicOut });
     let material = $state<THREE_TYPE.ShaderMaterial | undefined>(undefined);
-
-    $effect(() => {
-        if (material) {
-            material.uniforms.uLightMode.value =
-                mode.current === "light" ? 1.0 : 0.0;
-        }
-    });
 
     onMount(() => {
         let animationId: number;
@@ -32,7 +24,7 @@
                 uniforms: {
                     uTime: { value: 0 },
                     uResolution: { value: new THREE.Vector2() },
-                    uLightMode: { value: mode.current === "light" ? 1.0 : 0.0 },
+                    uCanvasHeight: { value: 150.0 },
                 },
                 vertexShader: `
                     void main() {
@@ -42,33 +34,47 @@
                 fragmentShader: `
                     uniform float uTime;
                     uniform vec2 uResolution;
-                    uniform float uLightMode;
+                    uniform float uCanvasHeight;
 
-                    vec3 rainbow(float t) {
-                        vec3 a = vec3(0.5, 0.5, 0.5);
-                        vec3 b = vec3(0.5, 0.5, 0.5);
+                    vec3 gradient(float t) {
+                        vec3 a = vec3(0.3, 0.4, 0.6);
+                        vec3 b = vec3(0.2, 0.2, 0.3);
                         vec3 c = vec3(1.0, 1.0, 1.0);
-                        vec3 d = vec3(0.00, 0.33, 0.67);
+                        vec3 d = vec3(0.55, 0.6, 0.65);
                         return a + b * cos(6.28318 * (c * t + d));
+                    }
+
+                    float hash(vec2 p) {
+                        return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);
+                    }
+
+                    float noise(vec2 p) {
+                        vec2 i = floor(p);
+                        vec2 f = fract(p);
+                        vec2 u = f * f * (3.0 - 2.0 * f);
+                        return mix(
+                            mix(hash(i), hash(i + vec2(1.0, 0.0)), u.x),
+                            mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), u.x),
+                            u.y
+                        );
                     }
 
                     void main() {
                         vec2 uv = gl_FragCoord.xy / uResolution;
-                        float fromBottom = uv.y;
-                        float topFade = 1.0 - smoothstep(0.3, 1.0, fromBottom);
                         float fromCenter = abs(uv.x - 0.5) * 2.0;
                         float cornerFalloff = 1.0 - fromCenter * fromCenter;
-                        float colorT = uv.x + uTime * 0.04;
-                        vec3 color = rainbow(colorT);
+                        float colorT = uv.x + uTime * 0.14;
+                        vec3 color = gradient(colorT);
 
-                        color = mix(color, vec3(1.0), uLightMode * 0.6);
+                        float n = noise(gl_FragCoord.xy * 0.4 + uTime * 0.5);
+                        color += (n - 0.5) * 0.08;
 
-                        float glow = exp(-fromBottom * 2.0) * cornerFalloff * topFade;
-                        float hotCore = exp(-fromBottom * 5.0) * cornerFalloff * 0.8 * topFade;
-                        float combined = glow + hotCore;
-
-                        float alpha = combined * mix(0.9, 0.5, uLightMode);
-
+                        float pixelsFromBottom = uv.y * uCanvasHeight;
+                        float falloff = 3.5 / uCanvasHeight;
+                        float exp_fade = exp(-pixelsFromBottom * falloff) * cornerFalloff;
+                        float ceiling_fade = 1.0 - smoothstep(0.6, 1.0, uv.y);
+                        float fade = exp_fade * ceiling_fade;
+                        float alpha = fade * 0.9;
                         gl_FragColor = vec4(color, alpha);
                     }
                 `,
@@ -118,6 +124,5 @@
     bind:this={canvas}
     style="opacity: {opacity.current}"
     style:background="transparent"
-    style:height="150px"
-    class="w-full pointer-events-none block"
+    class="w-full pointer-events-none block absolute bottom-0 left-0 h-24 md:h-36"
 ></canvas>

@@ -1,3 +1,7 @@
+<script>
+    import ArrowUpRight from "@lucide/svelte/icons/arrow-up-right";
+</script>
+
 <header
     class="sticky inset-0"
     style="background-color: oklch(from var(--background) l c h / 0.01);"
@@ -46,12 +50,21 @@
 
         <nav class="not-md:hidden">
             <ul
-                class="flex items-center gap-4 font-book text-sm *:transition-colors *:duration-250 text-muted-foreground *:hover:text-foreground"
+                class="flex items-center gap-4 text-sm *:transition-colors *:duration-250 text-muted-foreground *:hover:text-foreground"
             >
-                <!-- <li><a href="/about">About</a></li>
-                <li><a href="/projects">Projects</a></li>
+                <li><a href="/about">About</a></li>
+                <!-- <li><a href="/projects">Projects</a></li>
                 <li><a href="/music">Music</a></li> -->
-                <li><a href="https://github.com/devjdn">GitHub</a></li>
+                <li>
+                    <a
+                        href="https://github.com/devjdn"
+                        target="_blank"
+                        class="inline-flex gap-1 items-center"
+                    >
+                        GitHub
+                        <ArrowUpRight class="size-4" />
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>

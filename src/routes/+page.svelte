@@ -3,7 +3,6 @@
     import ArrowUpRight from "@lucide/svelte/icons/arrow-up-right";
     import MoveRight from "@lucide/svelte/icons/move-right";
     import Icon from "@iconify/svelte";
-
     const categories = [
         {
             label: "Languages",
@@ -163,8 +162,8 @@
     ];
 </script>
 
-<main class="max-w-5xl mx-auto w-full pt-24 items-center4">
-    <section class="not-lg:px-6 pb-24">
+<main class="max-w-5xl flex-1 mx-auto w-full pt-24 pb-48 space-y-24">
+    <section class="not-lg:px-6">
         <h1 class="tracking-tight text-2xl sm:text-3xl">
             Hello browser, I'm jdn.
         </h1>
@@ -173,11 +172,9 @@
         </p>
     </section>
 
-    <section class="not-lg:px-6 pb-24 space-y-5">
+    <section class="not-lg:px-6 space-y-5">
         <div class="flex items-center justify-between gap-4">
-            <h2 class="tracking-tight text-xl sm:text-2xl">
-                Selected Projects
-            </h2>
+            <h2 class="tracking-tight text-lg sm:text-xl">Selected Projects</h2>
 
             <a
                 href="/projects"
@@ -198,7 +195,7 @@
                     />
                 </div>
                 <div class="leading-snug space-y-2">
-                    <p class="text-sm md:text-base font-book md:tracking-tight">
+                    <p class="text-sm md:text-base md:tracking-tight">
                         ToolBase
                         <span class="text-muted-foreground">
                             - Personal web app built to manage the technologies
@@ -224,7 +221,7 @@
                     />
                 </div>
                 <div class="leading-snug space-y-2">
-                    <p class="text-sm md:text-base font-book md:tracking-tight">
+                    <p class="text-sm md:text-base md:tracking-tight">
                         Stargazer
                         <span class="text-muted-foreground">
                             - Interactive NASA API hub that allows users to
@@ -244,14 +241,14 @@
         </div>
     </section>
 
-    <section class="not-lg:px-6 pb-24 space-y-5">
-        <h2 class="tracking-tight text-xl sm:text-2xl">Skills</h2>
+    <section class="not-lg:px-6 space-y-5">
+        <h2 class="tracking-tight text-lg sm:text-xl">Skills</h2>
         <div class="grid grid-flow-row">
             {#each categories as { label, skills }}
                 <div
                     class="py-3 items-start md:grid md:grid-cols-[150px_1fr] flex flex-col not-md:gap-4 not-last:border-b"
                 >
-                    <p class="font-book text-sm md:text-base md:tracking-tight">
+                    <p class="text-sm md:text-base md:tracking-tight">
                         {label}
                     </p>
                     <div class="flex flex-wrap gap-x-6 gap-y-3">
@@ -271,7 +268,7 @@
         </div>
     </section>
 
-    <section class="not-lg:px-6 pb-24 space-y-5 text-center">
+    <section class="not-lg:px-6 space-y-5 text-center">
         <div class="space-y-4">
             <h2 class="tracking-tight text-xl sm:text-2xl">Contact Me</h2>
             <p class="text-muted-foreground tracking-tight">
