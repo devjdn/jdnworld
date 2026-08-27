@@ -50,18 +50,18 @@
 
         <nav class="not-md:hidden">
             <ul
-                class="flex items-center gap-4 text-sm *:transition-colors *:duration-250 text-muted-foreground *:hover:text-foreground"
+                class="flex items-center gap-4 text-sm *:transition-colors *:duration-250 text-foreground-muted *:hover:text-foreground"
             >
                 <li><a href="/about">About</a></li>
-                <!-- <li><a href="/projects">Projects</a></li>
-                <li><a href="/music">Music</a></li> -->
+                <li><a href="/projects">Projects</a></li>
+                <!-- <li><a href="/music">Music</a></li> -->
                 <li>
                     <a
                         href="https://github.com/devjdn"
                         target="_blank"
                         class="inline-flex gap-1 items-center"
                     >
-                        GitHub
+                        <span>GitHub</span>
                         <ArrowUpRight class="size-4" />
                     </a>
                 </li>

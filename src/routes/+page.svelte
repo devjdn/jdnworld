@@ -164,21 +164,23 @@
 
 <main class="max-w-5xl flex-1 mx-auto w-full pt-24 pb-48 space-y-24">
     <section class="not-lg:px-6">
-        <h1 class="tracking-tight text-2xl sm:text-3xl">
+        <h1 class=" text-2xl sm:text-3xl font-semibold">
             Hello browser, I'm jdn.
         </h1>
-        <p class="tracking-tight text-2xl sm:text-3xl text-muted-foreground">
+        <p
+            class="tracking-[-0.02em] font-semibold text-2xl sm:text-3xl text-foreground-muted"
+        >
             Frontend Web Developer
         </p>
     </section>
 
     <section class="not-lg:px-6 space-y-5">
         <div class="flex items-center justify-between gap-4">
-            <h2 class="tracking-tight text-lg sm:text-xl">Selected Projects</h2>
+            <h2 class="font-semibold">Selected Projects</h2>
 
             <a
                 href="/projects"
-                class="text-sm text-muted-foreground hover:text-foreground duration-250 transition-colors inline-flex gap-1 items-center"
+                class="text-sm text-foreground-muted hover:text-foreground duration-250 transition-colors inline-flex gap-1 items-center"
             >
                 <span>View All</span>
                 <MoveRight class="size-4" />
@@ -195,9 +197,9 @@
                     />
                 </div>
                 <div class="leading-snug space-y-2">
-                    <p class="text-sm md:text-base md:tracking-tight">
+                    <p class="text-sm md:text-base">
                         ToolBase
-                        <span class="text-muted-foreground">
+                        <span class="text-foreground-muted">
                             - Personal web app built to manage the technologies
                             I use within my developer workflow.
                         </span>
@@ -221,9 +223,9 @@
                     />
                 </div>
                 <div class="leading-snug space-y-2">
-                    <p class="text-sm md:text-base md:tracking-tight">
+                    <p class="text-sm md:text-base">
                         Stargazer
-                        <span class="text-muted-foreground">
+                        <span class="text-foreground-muted">
                             - Interactive NASA API hub that allows users to
                             explore space imagery and data.
                         </span>
@@ -242,13 +244,13 @@
     </section>
 
     <section class="not-lg:px-6 space-y-5">
-        <h2 class="tracking-tight text-lg sm:text-xl">Skills</h2>
+        <h2 class="font-semibold">Skills</h2>
         <div class="grid grid-flow-row">
             {#each categories as { label, skills }}
                 <div
                     class="py-3 items-start md:grid md:grid-cols-[150px_1fr] flex flex-col not-md:gap-4 not-last:border-b"
                 >
-                    <p class="text-sm md:text-base md:tracking-tight">
+                    <p class="text-sm md:text-base">
                         {label}
                     </p>
                     <div class="flex flex-wrap gap-x-6 gap-y-3">
@@ -256,7 +258,7 @@
                             <a
                                 {href}
                                 target="_blank"
-                                class="flex items-center gap-1.5 text-sm md:text-base md:tracking-tight text-muted-foreground hover:text-foreground transition-colors"
+                                class="flex items-center gap-1.5 text-sm md:text-base text-foreground-muted hover:text-foreground transition-colors"
                             >
                                 <Icon {icon} width={16} height={16} />
                                 {name}
@@ -270,8 +272,8 @@
 
     <section class="not-lg:px-6 space-y-5 text-center">
         <div class="space-y-4">
-            <h2 class="tracking-tight text-xl sm:text-2xl">Contact Me</h2>
-            <p class="text-muted-foreground tracking-tight">
+            <h2 class="font-semibold">Contact Me</h2>
+            <p class="text-foreground-muted">
                 If you'd like to get in touch, feel free to reach out through my
                 X/Twitter or via email :)
             </p>
