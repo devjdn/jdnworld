@@ -8,6 +8,13 @@
 
 @font-face {
     font-family: "Suisse Int'l";
+    src: url("/fonts/SuisseIntl-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Suisse Int'l";
     src: url("/fonts/SuisseIntl-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
@@ -106,31 +113,31 @@
     --foreground-subtle: oklch(0.38 0 0);
 
     /* --- Surface (sits on background) --- */
-    --surface: oklch(0.1 0 0);
+    --surface: oklch(0.23 0 0);
     --surface-foreground: oklch(0.97 0 0);
     --surface-foreground-muted: oklch(0.55 0 0);
     --surface-border: oklch(1 0 0 / 8%);
 
     /* --- Surface raised (sits on surface) --- */
-    --surface-raised: oklch(0.16 0 0);
+    --surface-raised: oklch(0.3 0 0);
     --surface-raised-foreground: oklch(0.97 0 0);
     --surface-raised-foreground-muted: oklch(0.55 0 0);
     --surface-raised-border: oklch(1 0 0 / 10%);
 
     /* --- Overlay (sits on surface-raised, modals/dropdowns) --- */
-    --overlay: oklch(0.2 0 0);
+    --overlay: oklch(0.37 0 0);
     --overlay-foreground: oklch(0.97 0 0);
     --overlay-foreground-muted: oklch(0.55 0 0);
     --overlay-border: oklch(1 0 0 / 12%);
 
     /* --- Border (base layer border) --- */
-    --border: oklch(1 0 0 / 8%);
+    --border: oklch(1 0 0 / 13%);
 
     /* --- Interactive track --- */
     --interactive: oklch(0.97 0 0);
     --interactive-foreground: oklch(0 0 0);
     --interactive-hover: oklch(0.85 0 0);
-    --interactive-muted: oklch(0.16 0 0);
+    --interactive-muted: oklch(0.23 0 0);
     --interactive-muted-foreground: oklch(0.97 0 0);
 
     /* --- Accent (decorative, not contrast-critical) --- */

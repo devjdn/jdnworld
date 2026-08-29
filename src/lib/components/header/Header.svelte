@@ -42,7 +42,7 @@
     </div>
 
     <div
-        class="h-12 not-lg:px-6 isolate z-10 max-w-5xl mx-auto w-full flex items-center justify-between gap-8"
+        class="h-12 px-6 lg:px-0 isolate z-10 max-w-5xl mx-auto w-full flex items-center justify-between gap-8"
     >
         <a href="/" class="font-medium tracking-tight">
             <span class="">jdn.world</span>
