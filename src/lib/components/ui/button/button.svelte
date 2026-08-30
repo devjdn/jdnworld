@@ -30,7 +30,7 @@
                     "bg-destructive-subtle text-destructive border-destructive/20 hover:bg-destructive/15 focus-visible:border-destructive/40 focus-visible:ring-destructive/20",
 
                 // Link — text only, no background
-                link: "text-foreground-muted underline-offset-4 hover:underline",
+                link: "text-foreground-muted hover:text-foreground",
             },
             size: {
                 default:
@@ -38,6 +38,7 @@
                 xs: "h-6 gap-1 px-2.5 text-xs has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 [&_svg:not([class*='size-'])]:size-3",
                 sm: "h-8 gap-1 px-3 tracking-tight has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
                 lg: "h-10 gap-1.5 px-4 tracking-tight has-data-[icon=inline-end]:pr-3 has-data-[icon=inline-start]:pl-3",
+                content: "gap-1.5 tracking-tight",
                 icon: "size-9",
                 "icon-xs": "size-6 [&_svg:not([class*='size-'])]:size-3",
                 "icon-sm": "size-8",

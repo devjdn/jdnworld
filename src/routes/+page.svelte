@@ -164,19 +164,15 @@
 
 <main class="max-w-5xl flex-1 mx-auto w-full pt-24 pb-48 space-y-24">
     <section class="px-6 lg:px-0">
-        <h1 class=" text-2xl sm:text-3xl font-medium">
-            Hello browser, I'm jdn.
-        </h1>
-        <p
-            class="tracking-[-0.02em] font-medium text-2xl sm:text-3xl text-foreground-muted"
-        >
+        <h1 class="font-medium text-3xl">Hello browser, I'm jdn.</h1>
+        <p class="font-medium text-3xl text-foreground-muted">
             Frontend Web Developer
         </p>
     </section>
 
     <section class="px-6 lg:px-0 space-y-5">
         <div class="flex items-center justify-between gap-4">
-            <h2 class="font-medium">Selected Projects</h2>
+            <h2 class="md:text-lg font-medium">Selected Projects</h2>
 
             <a
                 href="/projects"
@@ -244,7 +240,7 @@
     </section>
 
     <section class="px-6 lg:px-0 space-y-5">
-        <h2 class="font-medium">Skills</h2>
+        <h2 class="md:text-lg font-medium">Skills</h2>
         <div class="grid grid-flow-row">
             {#each categories as { label, skills }}
                 <div
@@ -272,7 +268,7 @@
 
     <section class="px-6 lg:px-0 space-y-5 text-center">
         <div class="space-y-4">
-            <h2 class="font-medium">Contact Me</h2>
+            <h2 class="md:text-lg font-medium">Contact Me</h2>
             <p class="text-foreground-muted">
                 If you'd like to get in touch, feel free to reach out through my
                 X/Twitter or via email :)

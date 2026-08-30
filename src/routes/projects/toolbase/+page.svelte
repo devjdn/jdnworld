@@ -1,10 +1,19 @@
 <script lang="ts">
     import { Badge } from "$lib/components/ui/badge";
+    import { Button } from "$lib/components/ui/button";
+    import ArrowUpRight from "@lucide/svelte/icons/arrow-up-right";
 </script>
 
 <main class="pt-24 pb-48 space-y-24">
-    <section class="px-6 lg:px-0 max-w-5xl flex-1 mx-auto w-full">
-        <h1 class="text-2xl sm:text-3xl font-medium">ToolBase</h1>
+    <section
+        class="px-6 lg:px-0 max-w-5xl flex-1 flex flex-col md:flex-row justify-between md:items-center gap-3 mx-auto w-full"
+    >
+        <h1 class="font-medium text-3xl">ToolBase</h1>
+
+        <Button size="lg" class="self-start" href="https://toolbase.jdn.world">
+            Visit Project
+            <ArrowUpRight />
+        </Button>
     </section>
 
     <section class="px-6 lg:px-0 max-w-5xl flex-1 mx-auto w-full space-y-6">

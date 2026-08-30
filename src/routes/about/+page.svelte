@@ -1,22 +1,28 @@
 <main
     class="max-w-5xl flex-1 mx-auto w-full pt-24 pb-48 space-y-12 px-6 lg:px-0"
 >
-    <section class="space-y-10">
-        <h1 class="text-2xl font-medium sm:text-3xl">About</h1>
-
-        <p class="text-base max-w-prose">
-            If I had to summarise myself professionally, I'd say I'm Jayden, a
-            20 year old frontend web developer from the UK. However, I have
-            passions beyond the work I do. Beyond it, I love listening to music,
-            playing video games, and watching football; just to name a few.
-        </p>
+    <section>
+        <h1 class="font-medium text-3xl">About</h1>
     </section>
 
-    <div class="h-0 border-t"></div>
-
-    <section class="not-md:space-y-6 md:grid md:grid-cols-[200px_1fr] md:gap-8">
+    <section class="not-md:space-y-6 md:grid md:grid-cols-[25ch_1fr] md:gap-8">
         <div>
-            <h2 class="font-medium">Development Philosophy</h2>
+            <h2 class="md:text-lg font-medium">Summary</h2>
+        </div>
+        <div>
+            <p class="max-w-prose md:ml-auto">
+                If I had to summarise myself professionally, I'd say I'm Jayden,
+                a 20 year old frontend web developer from the UK. However, I
+                have passions beyond the work I do. Beyond it, I love listening
+                to music, playing video games, and watching football; just to
+                name a few.
+            </p>
+        </div>
+    </section>
+
+    <section class="not-md:space-y-6 md:grid md:grid-cols-[25ch_1fr] md:gap-8">
+        <div>
+            <h2 class="md:text-lg font-medium">Development Philosophy</h2>
         </div>
         <div>
             <p class="max-w-prose md:ml-auto">
@@ -30,10 +36,10 @@
     </section>
 
     <section
-        class="not-md:space-y-6 md:grid md:grid-cols-[200px_1fr] justify-between md:gap-8"
+        class="not-md:space-y-6 md:grid md:grid-cols-[25ch_1fr] justify-between md:gap-8"
     >
         <div>
-            <h2 class="font-medium">Love of Music</h2>
+            <h2 class="md:text-lg font-medium">Love of Music</h2>
         </div>
         <div>
             <p class="max-w-prose md:ml-auto">
@@ -51,9 +57,9 @@
         </div>
     </section>
 
-    <section class="not-md:space-y-6 md:grid md:grid-cols-[200px_1fr] md:gap-8">
+    <section class="not-md:space-y-6 md:grid md:grid-cols-[25ch_1fr] md:gap-8">
         <div>
-            <h2 class="font-medium">Leeds United</h2>
+            <h2 class="md:text-lg font-medium">Leeds United</h2>
         </div>
         <div>
             <p class="max-w-prose md:ml-auto">
