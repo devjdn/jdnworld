@@ -1,5 +1,6 @@
 <script>
     import ArrowUpRight from "@lucide/svelte/icons/arrow-up-right";
+    import { page } from "$app/state";
 </script>
 
 <header
@@ -42,27 +43,18 @@
     </div>
 
     <div
-        class="h-12 px-6 lg:px-0 isolate z-10 max-w-5xl mx-auto w-full flex items-center justify-between gap-8"
+        class="h-14 px-6 lg:px-12 isolate z-10 w-full flex items-center justify-between lg:grid lg:grid-cols-2 gap-3 text-lg"
     >
         <a href="/" class="font-medium tracking-tight">
             <span class="">jdn.world</span>
         </a>
-
-        <nav class="not-md:hidden">
-            <ul
-                class="flex items-center gap-4 text-sm *:transition-colors *:duration-250 text-foreground-muted *:hover:text-foreground"
-            >
-                <li><a href="/about">About</a></li>
+        <nav class="hidden lg:block">
+            <ul class="font-medium tracking-tight grid grid-cols-3">
                 <li><a href="/projects">Projects</a></li>
-                <!-- <li><a href="/music">Music</a></li> -->
+                <li><a href="/about">About</a></li>
                 <li>
-                    <a
-                        href="https://github.com/devjdn"
-                        target="_blank"
-                        class="inline-flex gap-1 items-center"
-                    >
-                        <span>GitHub</span>
-                        <ArrowUpRight class="size-4" />
+                    <a href="https://github.com/devjdn" target="_blank">
+                        GitHub
                     </a>
                 </li>
             </ul>

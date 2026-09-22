@@ -3,6 +3,8 @@
     import ArrowUpRight from "@lucide/svelte/icons/arrow-up-right";
     import MoveRight from "@lucide/svelte/icons/move-right";
     import Icon from "@iconify/svelte";
+    import BiasLight from "$lib/components/lighting/BiasLight.svelte";
+
     const categories = [
         {
             label: "Languages",
@@ -290,3 +292,5 @@
         </div>
     </section>
 </main>
+
+<BiasLight />

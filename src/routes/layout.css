@@ -155,6 +155,41 @@
     --ring: oklch(1 0 0 / 35%);
 }
 
+.theme-stargazer {
+    /* Base */
+    --background: oklch(70.5% 0.213 47.604);
+    --foreground: oklch(12% 0.04 47.604);
+    --foreground-muted: oklch(25% 0.035 47.604);
+    --foreground-subtle: oklch(38% 0.03 47.604);
+
+    /* Surface */
+    --surface: oklch(65% 0.21 47.604);
+    --surface-foreground: oklch(12% 0.04 47.604);
+    --surface-foreground-muted: oklch(25% 0.035 47.604);
+    --surface-border: oklch(60% 0.2 47.604);
+
+    /* Surface raised */
+    --surface-raised: oklch(62% 0.205 47.604);
+    --surface-raised-foreground: oklch(12% 0.04 47.604);
+    --surface-raised-foreground-muted: oklch(25% 0.035 47.604);
+    --surface-raised-border: oklch(57% 0.195 47.604);
+
+    /* Border */
+    --border: oklch(62% 0.2 47.604);
+
+    /* Interactive */
+    --interactive: oklch(12% 0.04 47.604);
+    --interactive-foreground: oklch(97% 0 0);
+    --interactive-hover: oklch(22% 0.04 47.604);
+    --interactive-muted: oklch(65% 0.21 47.604);
+    --interactive-muted-foreground: oklch(12% 0.04 47.604);
+
+    /* Accent */
+    --accent: oklch(12% 0.04 47.604);
+    --accent-foreground: oklch(70.5% 0.213 47.604);
+    --accent-subtle: oklch(65% 0.21 47.604);
+}
+
 @theme inline {
     --font-sans: "Suisse Int'l", sans-serif;
     --font-weight-book: var(--book);
@@ -224,10 +259,10 @@
         @apply border-border outline-ring/50;
     }
     body {
-        @apply bg-background text-foreground flex flex-col min-h-lvh relative;
+        @apply min-h-lvh font-sans;
     }
     html {
-        @apply font-sans overscroll-y-none;
+        @apply overscroll-y-none;
     }
     h1,
     h2,
