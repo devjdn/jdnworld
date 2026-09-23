@@ -45,14 +45,14 @@
     <div
         class="h-14 px-6 lg:px-12 isolate z-10 w-full flex items-center justify-between lg:grid lg:grid-cols-2 gap-3 text-lg"
     >
-        <a href="/" class="font-medium tracking-tight">
+        <a href="/" class="font-medium tracking-tight w-fit">
             <span class="">jdn.world</span>
         </a>
         <nav class="hidden lg:block">
             <ul class="font-medium tracking-tight grid grid-cols-3">
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/about">About</a></li>
-                <li>
+                <li class="w-fit"><a href="/projects">Projects</a></li>
+                <li class="w-fit"><a href="/about">About</a></li>
+                <li class="w-fit">
                     <a href="https://github.com/devjdn" target="_blank">
                         GitHub
                     </a>

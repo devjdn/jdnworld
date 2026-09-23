@@ -1,43 +1,45 @@
 <script lang="ts">
     import { Badge } from "$lib/components/ui/badge";
     import { Button } from "$lib/components/ui/button";
-    import { RiArrowRightUpLine } from "svelte-remixicon";
+    import { RiArrowRightUpLongLine } from "svelte-remixicon";
 </script>
 
-<main class="pt-24 pb-48 space-y-12 lg:space-y-24">
+<main class="pt-12 pb-36 md:pt-24 md:pb-48 space-y-12">
     <section
-        class="px-6 lg:px-12 flex flex-col md:grid md:grid-cols-2 items-start gap-6"
+        class="px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 items-start gap-6"
     >
-        <div class="space-y-3">
-            <p class="font-medium text-lg">Project</p>
-            <h1 class="text-5xl lg:text-6xl xl:text-7xl font-medium uppercase">
+        <div class="space-y-1.5 md:space-y-3">
+            <p class="font-medium">Project</p>
+            <h1
+                class="text-5xl lg:text-6xl xl:text-7xl uppercase font-condensed"
+            >
                 Stargazer
             </h1>
         </div>
 
-        <div class="flex flex-col w-full md:grid md:grid-cols-2 gap-3">
-            <div class="space-y-3 self-end not-md:text-right">
-                <p class="font-medium text-lg">Year</p>
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-1.5 md:space-y-3">
+                <p class="font-medium">Year</p>
                 <span
-                    class="text-5xl lg:text-6xl xl:text-7xl font-medium tracking-tighter uppercase"
+                    class="text-5xl lg:text-6xl xl:text-7xl font-condensed tracking-tighter uppercase"
                 >
-                    2026
+                    2026 Q1-Q2
                 </span>
             </div>
 
-            <div class="space-y-3 md:place-self-end">
-                <p class="font-medium text-lg">Website</p>
+            <div class="space-y-1.5 md:space-y-3 md:place-self-end">
+                <p class="font-medium">Website</p>
                 <a
                     href="https://stargazer.jdn.world"
                     target="_blank"
                     class="inline-flex items-center group"
                 >
                     <span
-                        class="text-5xl lg:text-6xl xl:text-7xl font-medium tracking-tight uppercase"
+                        class="text-5xl lg:text-6xl xl:text-7xl font-condensed tracking-tight uppercase"
                     >
                         Visit
                     </span>
-                    <RiArrowRightUpLine
+                    <RiArrowRightUpLongLine
                         class="text-5xl lg:text-6xl xl:text-7xl group-hover:rotate-45 transition-transform duration-300"
                         stroke-width="8"
                     />
@@ -46,10 +48,10 @@
         </div>
     </section>
 
-    <section class="px-6 lg:px-12">
-        <div class="overflow-hidden">
+    <section class="px-6 lg:px-12 flex-1 gap-6">
+        <div class="overflow-hidden w-full">
             <img
-                src="/images/stargazer-preview-raw.webp"
+                src="/images/stargazer-portfolio.webp"
                 alt="Stargazer project preview"
                 class="object-cover"
             />
@@ -57,14 +59,14 @@
     </section>
 
     <section class="px-6 lg:px-12 space-y-6 lg:space-y-12">
-        <div class="not-md:space-y-3 md:grid md:grid-cols-2 md:gap-8">
+        <div
+            class="not-md:space-y-1.5 md:space-y-3 md:grid md:grid-cols-2 md:gap-8"
+        >
             <div>
-                <h2 class="font-medium text-lg lg:text-2xl">
-                    Project Description
-                </h2>
+                <h2 class="font-medium lg:text-2xl">Project Description</h2>
             </div>
             <div class="space-y-5">
-                <p class="max-w-prose text-lg lg:text-2xl">
+                <p class="max-w-prose lg:text-2xl">
                     Space and astronomy has been an interest I've had since I
                     was a kid, but I never really managed to find good web
                     platforms to be able to explore the imagery and data that is
@@ -74,7 +76,7 @@
                     myself, but for everyone else like me who has experienced
                     the same frustration.
                 </p>
-                <p class="max-w-prose text-lg lg:text-2xl">
+                <p class="max-w-prose lg:text-2xl">
                     Using Stargazer, you can explore three APIs built by NASA
                     and their teams: Astronomy Picture of the Day (APOD), Earth
                     Polychromatic Imaging Camera (EPIC), and Near Earth Objects
@@ -87,9 +89,9 @@
 
         <div class="h-0 border-t"></div>
 
-        <div class="not-md:space-y-3 md:grid md:grid-cols-2 md:gap-8">
+        <div class="space-y-3 md:grid md:grid-cols-2 md:gap-8">
             <div>
-                <h2 class="font-medium text-lg lg:text-2xl">Tech Stack</h2>
+                <h2 class="font-medium lg:text-2xl">Tech Stack</h2>
             </div>
             <div class="flex gap-1 flex-wrap">
                 <Badge variant="secondary">React</Badge>

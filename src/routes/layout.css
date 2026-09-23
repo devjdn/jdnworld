@@ -35,6 +35,13 @@
     font-display: swap;
 }
 @font-face {
+    font-family: "Suisse Int'l Condensed";
+    src: url("/fonts/SuisseIntlCond-Medium-WebS.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
     font-family: "Suisse Int'l";
     src: url("/fonts/SuisseIntl-Semibold.woff2") format("woff2");
     font-weight: 600;
@@ -190,8 +197,44 @@
     --accent-subtle: oklch(65% 0.21 47.604);
 }
 
+.theme-about {
+    /* Base */
+    --background: oklch(72% 0.18 5);
+    --foreground: oklch(12% 0.04 5);
+    --foreground-muted: oklch(25% 0.035 5);
+    --foreground-subtle: oklch(38% 0.03 5);
+
+    /* Surface */
+    --surface: oklch(67% 0.175 5);
+    --surface-foreground: oklch(12% 0.04 5);
+    --surface-foreground-muted: oklch(25% 0.035 5);
+    --surface-border: oklch(62% 0.165 5);
+
+    /* Surface raised */
+    --surface-raised: oklch(64% 0.17 5);
+    --surface-raised-foreground: oklch(12% 0.04 5);
+    --surface-raised-foreground-muted: oklch(25% 0.035 5);
+    --surface-raised-border: oklch(59% 0.16 5);
+
+    /* Border */
+    --border: oklch(64% 0.165 5);
+
+    /* Interactive */
+    --interactive: oklch(12% 0.04 5);
+    --interactive-foreground: oklch(97% 0 0);
+    --interactive-hover: oklch(22% 0.04 5);
+    --interactive-muted: oklch(67% 0.175 5);
+    --interactive-muted-foreground: oklch(12% 0.04 5);
+
+    /* Accent */
+    --accent: oklch(12% 0.04 5);
+    --accent-foreground: oklch(72% 0.18 5);
+    --accent-subtle: oklch(67% 0.175 5);
+}
+
 @theme inline {
     --font-sans: "Suisse Int'l", sans-serif;
+    --font-condensed: "Suisse Int'l Condensed", sans-serif;
     --font-weight-book: var(--book);
 
     /* Base */
