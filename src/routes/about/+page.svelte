@@ -8,7 +8,9 @@
     <section class="px-6 lg:px-12 grid grid-cols-1 gap-x-6 gap-y-6 md:gap-y-12">
         <article class="not-md:space-y-3 md:grid md:grid-cols-2 md:gap-6">
             <div>
-                <h2 class="lg:text-2xl font-medium">Summary</h2>
+                <h2 class="lg:text-2xl font-medium text-foreground-subtle">
+                    Summary
+                </h2>
             </div>
             <div>
                 <p class="max-w-prose lg:text-2xl">
@@ -22,7 +24,9 @@
 
         <article class="not-md:space-y-3 md:grid md:grid-cols-2 md:gap-6">
             <div>
-                <h2 class="lg:text-2xl font-medium">Development Philosophy</h2>
+                <h2 class="lg:text-2xl font-medium text-foreground-subtle">
+                    Development Philosophy
+                </h2>
             </div>
             <div>
                 <p class="max-w-prose lg:text-2xl">
@@ -40,7 +44,9 @@
             class="not-md:space-y-3 md:grid md:grid-cols-2 justify-between md:gap-6"
         >
             <div>
-                <h2 class="lg:text-2xl font-medium">Love of Music</h2>
+                <h2 class="lg:text-2xl font-medium text-foreground-subtle">
+                    Love of Music
+                </h2>
             </div>
             <div>
                 <p class="max-w-prose lg:text-2xl">
@@ -61,7 +67,9 @@
 
         <article class="not-md:space-y-3 md:grid md:grid-cols-2 md:gap-6">
             <div>
-                <h2 class="lg:text-2xl font-medium">Football</h2>
+                <h2 class="lg:text-2xl font-medium text-foreground-subtle">
+                    Football
+                </h2>
             </div>
             <div>
                 <p class="max-w-prose lg:text-2xl">

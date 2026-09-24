@@ -3,7 +3,6 @@
     import ArrowUpRight from "@lucide/svelte/icons/arrow-up-right";
     import MoveRight from "@lucide/svelte/icons/move-right";
     import Icon from "@iconify/svelte";
-    import BiasLight from "$lib/components/lighting/BiasLight.svelte";
 
     const categories = [
         {
@@ -189,7 +188,7 @@
             <article class="space-y-4">
                 <div class="overflow-hidden rounded-xl">
                     <img
-                        src="/images/toolbase-preview.webp"
+                        src="/images/toolbase-hero-preview.webp"
                         alt="ToolBase project preview"
                         class="aspect-4/3 object-cover"
                     />
@@ -215,7 +214,7 @@
             <article class="space-y-4">
                 <div class="overflow-hidden rounded-xl">
                     <img
-                        src="/images/stargazer-preview.webp"
+                        src="/images/stargazer-hero-preview.webp"
                         alt="Stargazer project preview"
                         class="aspect-4/3 object-cover"
                     />
@@ -292,5 +291,3 @@
         </div>
     </section>
 </main>
-
-<BiasLight />

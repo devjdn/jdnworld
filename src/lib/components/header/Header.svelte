@@ -1,6 +1,6 @@
 <script>
-    import ArrowUpRight from "@lucide/svelte/icons/arrow-up-right";
     import { page } from "$app/state";
+    import { RiArrowRightUpLongLine } from "svelte-remixicon";
 </script>
 
 <header
@@ -53,8 +53,15 @@
                 <li class="w-fit"><a href="/projects">Projects</a></li>
                 <li class="w-fit"><a href="/about">About</a></li>
                 <li class="w-fit">
-                    <a href="https://github.com/devjdn" target="_blank">
-                        GitHub
+                    <a
+                        href="https://github.com/devjdn"
+                        class="inline-flex group items-center gap-0.5"
+                        target="_blank"
+                    >
+                        <span>GitHub</span>
+                        <RiArrowRightUpLongLine
+                            class="group-hover:rotate-45 transition-transform duration-300"
+                        />
                     </a>
                 </li>
             </ul>

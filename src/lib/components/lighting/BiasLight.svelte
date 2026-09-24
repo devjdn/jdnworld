@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
     import { onMount } from "svelte";
     import { Tween } from "svelte/motion";
     import { cubicOut } from "svelte/easing";
@@ -125,4 +125,4 @@
     style="opacity: {opacity.current}"
     style:background="transparent"
     class="w-full pointer-events-none block absolute bottom-0 left-0 h-48 md:h-60 -z-10"
-></canvas>
+></canvas> -->

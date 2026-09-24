@@ -1,70 +1,44 @@
 <script lang="ts">
     import { Badge } from "$lib/components/ui/badge";
-    import { Button } from "$lib/components/ui/button";
-    import { RiArrowRightUpLongLine } from "svelte-remixicon";
+    import ProjectsHeader from "$lib/components/layout-content/ProjectsHeader.svelte";
+    import ProjectInformation from "$lib/components/layout-content/ProjectInformation.svelte";
 </script>
 
 <main class="pt-12 pb-36 md:pt-24 md:pb-48 space-y-12">
+    <ProjectsHeader
+        title="Stargazer"
+        year="2026 Q1+2"
+        url="https://stargazer.jdn.world"
+    />
+
     <section
-        class="px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 items-start gap-6"
+        class="px-6 lg:px-12 flex-1 flex flex-col md:grid md:grid-cols-[1.65fr_1fr] md:grid-rows-2 gap-1.5 md:aspect-16/7"
     >
-        <div class="space-y-1.5 md:space-y-3">
-            <p class="font-medium">Project</p>
-            <h1
-                class="text-5xl lg:text-6xl xl:text-7xl uppercase font-condensed"
-            >
-                Stargazer
-            </h1>
-        </div>
-
-        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="space-y-1.5 md:space-y-3">
-                <p class="font-medium">Year</p>
-                <span
-                    class="text-5xl lg:text-6xl xl:text-7xl font-condensed tracking-tighter uppercase"
-                >
-                    2026 Q1-Q2
-                </span>
-            </div>
-
-            <div class="space-y-1.5 md:space-y-3 md:place-self-end">
-                <p class="font-medium">Website</p>
-                <a
-                    href="https://stargazer.jdn.world"
-                    target="_blank"
-                    class="inline-flex items-center group"
-                >
-                    <span
-                        class="text-5xl lg:text-6xl xl:text-7xl font-condensed tracking-tight uppercase"
-                    >
-                        Visit
-                    </span>
-                    <RiArrowRightUpLongLine
-                        class="text-5xl lg:text-6xl xl:text-7xl group-hover:rotate-45 transition-transform duration-300"
-                        stroke-width="8"
-                    />
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="px-6 lg:px-12 flex-1 gap-6">
-        <div class="overflow-hidden w-full">
+        <div class="overflow-hidden row-span-2">
             <img
-                src="/images/stargazer-portfolio.webp"
+                src="/images/stargazer-hero-preview.webp"
                 alt="Stargazer project preview"
-                class="object-cover"
+                class="w-full h-full object-cover object-center"
+            />
+        </div>
+        <div class="overflow-hidden">
+            <img
+                src="/images/stargazer-epic-closeup-preview.webp"
+                alt="Stargazer EPIC closeup"
+                class="w-full h-full object-cover object-center"
+            />
+        </div>
+        <div class="overflow-hidden">
+            <img
+                src="/images/stargazer-neows-preview.webp"
+                alt="Stargazer NEOWS"
+                class="w-full h-full object-cover object-center"
             />
         </div>
     </section>
 
     <section class="px-6 lg:px-12 space-y-6 lg:space-y-12">
-        <div
-            class="not-md:space-y-1.5 md:space-y-3 md:grid md:grid-cols-2 md:gap-8"
-        >
-            <div>
-                <h2 class="font-medium lg:text-2xl">Project Description</h2>
-            </div>
+        <ProjectInformation heading="Project Description">
             <div class="space-y-5">
                 <p class="max-w-prose lg:text-2xl">
                     Space and astronomy has been an interest I've had since I
@@ -85,14 +59,11 @@
                     explore.
                 </p>
             </div>
-        </div>
+        </ProjectInformation>
 
         <div class="h-0 border-t"></div>
 
-        <div class="space-y-3 md:grid md:grid-cols-2 md:gap-8">
-            <div>
-                <h2 class="font-medium lg:text-2xl">Tech Stack</h2>
-            </div>
+        <ProjectInformation heading="Tech Stack">
             <div class="flex gap-1 flex-wrap">
                 <Badge variant="secondary">React</Badge>
                 <Badge variant="secondary">Next.js</Badge>
@@ -105,6 +76,19 @@
                 <Badge variant="secondary">date-fns</Badge>
                 <Badge variant="secondary">Vercel</Badge>
             </div>
-        </div>
+        </ProjectInformation>
+
+        <div class="h-0 border-t"></div>
+
+        <ProjectInformation heading="Fonts & Icon Libraries">
+            <ul class="list-disc list-inside lg:text-2xl">
+                <li>Inter</li>
+                <li>Inter Tight</li>
+                <li>IBM Plex Mono</li>
+                <li>Lucide Icons</li>
+                <li>Hugeicons</li>
+                <li>Remix Icon</li>
+            </ul>
+        </ProjectInformation>
     </section>
 </main>
