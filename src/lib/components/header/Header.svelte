@@ -3,11 +3,8 @@
     import { RiArrowRightUpLongLine } from "svelte-remixicon";
 </script>
 
-<header
-    class="sticky inset-0"
-    style="background-color: oklch(from var(--background) l c h / 0.01);"
->
-    <div
+<header style="background-color: oklch(from var(--background) l c h / 0.01);">
+    <!-- <div
         id="header-blur-backdrop"
         class="pointer-events-none absolute grid h-16 inset-0"
         aria-hidden="true"
@@ -40,7 +37,7 @@
             class="blur-span"
             style="backdrop-filter: blur(32px); mask: linear-gradient(0deg, transparent 48%, var(--background) 60%);"
         ></span>
-    </div>
+    </div> -->
 
     <div
         class="h-14 px-6 lg:px-12 isolate z-10 w-full flex items-center justify-between lg:grid lg:grid-cols-2 gap-3 text-lg"
@@ -69,10 +66,10 @@
     </div>
 </header>
 
-<style>
+<!-- <style>
     .blur-span {
         grid-area: 1 / 1;
         transform: translateZ(0);
         backface-visibility: hidden;
     }
-</style>
+</style> -->

@@ -2,6 +2,7 @@
     import { Badge } from "$lib/components/ui/badge";
     import ProjectsHeader from "$lib/components/layout-content/ProjectsHeader.svelte";
     import ProjectInformation from "$lib/components/layout-content/ProjectInformation.svelte";
+    import { staggerChildren } from "$lib/actions/motion";
 </script>
 
 <main class="pt-12 pb-36 md:pt-24 md:pb-48 space-y-12">
@@ -13,6 +14,7 @@
 
     <section
         class="px-6 lg:px-12 flex-1 flex flex-col md:grid md:grid-cols-[1.65fr_1fr] md:grid-rows-2 gap-1.5 md:aspect-16/7"
+        use:staggerChildren={{ gap: 0.08 }}
     >
         <div class="overflow-hidden row-span-2">
             <img
@@ -37,7 +39,10 @@
         </div>
     </section>
 
-    <section class="px-6 lg:px-12 space-y-6 lg:space-y-12">
+    <section
+        class="px-6 lg:px-12 space-y-6 lg:space-y-12"
+        use:staggerChildren={{ gap: 0.08 }}
+    >
         <ProjectInformation heading="Project Description">
             <div class="space-y-5">
                 <p class="max-w-prose lg:text-2xl">
@@ -81,7 +86,7 @@
         <div class="h-0 border-t"></div>
 
         <ProjectInformation heading="Fonts & Icon Libraries">
-            <ul class="list-disc list-inside lg:text-2xl">
+            <ul class="list-disc list-inside lg:text-2xl lg:tracking-[-0.02em]">
                 <li>Inter</li>
                 <li>Inter Tight</li>
                 <li>IBM Plex Mono</li>

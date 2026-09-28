@@ -1,7 +1,4 @@
 <script lang="ts">
-    import { Button } from "$lib/components/ui/button";
-    import ArrowUpRight from "@lucide/svelte/icons/arrow-up-right";
-    import MoveRight from "@lucide/svelte/icons/move-right";
     import Icon from "@iconify/svelte";
 
     const categories = [
@@ -163,94 +160,76 @@
     ];
 </script>
 
-<main class="max-w-5xl flex-1 mx-auto w-full pt-24 pb-48 space-y-24">
-    <section class="px-6 lg:px-0">
-        <h1 class="font-medium text-3xl">Hello browser, I'm jdn.</h1>
-        <p class="font-medium text-3xl text-foreground-muted">
-            Frontend Web Developer
+<main class="pt-24 pb-36 md:pb-48 space-y-36">
+    <section class="px-6 lg:px-12 space-y-6">
+        <h1 class="text-5xl sm:text-[96px] lg:text-[124px] font-condensed">
+            Hello browser,
+        </h1>
+        <p
+            class="text-lg lg:text-2xl text-foreground-muted max-w-4xl supports-text-pretty:text-pretty text-balance leading-[1.2]"
+        >
+            Welcome to my corner of the web! I'm a jdn, frontend web developer
+            from the UK with a love for effective, minimalist design.
         </p>
     </section>
 
-    <section class="px-6 lg:px-0 space-y-5">
-        <div class="flex items-center justify-between gap-4">
-            <h2 class="md:text-lg font-medium">Selected Projects</h2>
+    <section class="px-6 lg:px-12 space-y-12">
+        <h2 class="text-2xl lg:text-3xl font-medium tracking-tighter">
+            Selected Work
+        </h2>
 
-            <a
-                href="/projects"
-                class="text-sm text-foreground-muted hover:text-foreground duration-250 transition-colors inline-flex gap-1 items-center"
-            >
-                <span>View All</span>
-                <MoveRight class="size-4" />
-            </a>
-        </div>
-
-        <div class="flex flex-col md:grid md:grid-cols-2 gap-x-3 gap-y-10">
-            <article class="space-y-4">
-                <div class="overflow-hidden rounded-xl">
-                    <img
-                        src="/images/toolbase-hero-preview.webp"
-                        alt="ToolBase project preview"
-                        class="aspect-4/3 object-cover"
-                    />
-                </div>
-                <div class="leading-snug space-y-2">
-                    <p class="text-sm md:text-base">
-                        ToolBase
-                        <span class="text-foreground-muted">
-                            - Personal web app built to manage the technologies
-                            I use within my developer workflow.
-                        </span>
-                    </p>
-                </div>
-                <Button
-                    href="https://toolbase.jdn.world"
-                    target="_blank"
-                    size="lg"
-                >
-                    Visit ToolBase
-                    <ArrowUpRight />
-                </Button>
-            </article>
-            <article class="space-y-4">
-                <div class="overflow-hidden rounded-xl">
+        <div class="flex flex-col md:grid md:grid-cols-2 gap-6">
+            <article class="flex flex-col gap-3 pb-3">
+                <div class="overflow-hidden">
                     <img
                         src="/images/stargazer-hero-preview.webp"
                         alt="Stargazer project preview"
                         class="aspect-4/3 object-cover"
                     />
                 </div>
-                <div class="leading-snug space-y-2">
-                    <p class="text-sm md:text-base">
-                        Stargazer
-                        <span class="text-foreground-muted">
-                            - Interactive NASA API hub that allows users to
-                            explore space imagery and data.
-                        </span>
+
+                <div class="flex flex-col">
+                    <p class="not-md:text-sm">Stargazer</p>
+
+                    <p class="text-foreground-muted not-md:text-sm">
+                        Browse the vast collection of NASA imagery and data.
                     </p>
                 </div>
-                <Button
-                    href="https://stargazer.jdn.world"
-                    target="_blank"
-                    size="lg"
-                >
-                    Visit Stargazer
-                    <ArrowUpRight />
-                </Button>
+            </article>
+
+            <article class="flex flex-col gap-3">
+                <div class="overflow-hidden">
+                    <img
+                        src="/images/toolbase-hero-preview.webp"
+                        alt="ToolBase project preview"
+                        class="aspect-4/3 object-cover"
+                    />
+                </div>
+
+                <div class="flex flex-col">
+                    <p class="not-md:text-sm">ToolBase</p>
+
+                    <p class="text-foreground-muted not-md:text-sm">
+                        Manage technologies within your developer workflow.
+                    </p>
+                </div>
             </article>
         </div>
     </section>
 
-    <section class="px-6 lg:px-0 space-y-5">
-        <h2 class="md:text-lg font-medium">Skills</h2>
-        <div class="grid grid-flow-row">
+    <section class="space-y-12 px-6 lg:px-12">
+        <h2 class="text-2xl lg:text-3xl font-medium tracking-tighter">
+            Skills
+        </h2>
+        <div
+            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-6 gap-y-12"
+        >
             {#each categories as { label, skills }}
-                <div
-                    class="py-3 items-start md:grid md:grid-cols-[150px_1fr] flex flex-col not-md:gap-4 not-last:border-b"
-                >
-                    <p class="text-sm md:text-base">
+                <div class="space-y-3">
+                    <p class="text-sm md:text-base font-medium">
                         {label}
                     </p>
-                    <div class="flex flex-wrap gap-x-6 gap-y-3">
+                    <div class="flex flex-col gap-x-6 gap-y-3">
                         {#each skills as { name, icon, href }}
                             <a
                                 {href}
@@ -267,27 +246,33 @@
         </div>
     </section>
 
-    <section class="px-6 lg:px-0 space-y-5 text-center">
-        <div class="space-y-4">
-            <h2 class="md:text-lg font-medium">Contact Me</h2>
-            <p class="text-foreground-muted">
-                If you'd like to get in touch, feel free to reach out through my
-                X/Twitter or via email :)
-            </p>
+    <section
+        class="not-md:space-y-3 md:grid md:grid-cols-2 md:gap-6 px-6 lg:px-12"
+    >
+        <div>
+            <h2 class="text-2xl lg:text-3xl font-medium tracking-tighter">
+                I'm located in the UK, <br /> but you talk to me on
+            </h2>
         </div>
 
-        <div class="grid grid-cols-[160px] gap-1 w-fit mx-auto">
-            <Button size="lg" href="https://x.com/NotCellium" target="_blank">
-                <span>X / Twitter</span>
-            </Button>
-            <Button
-                size="lg"
-                variant="secondary"
-                href="mailto:jaydenux@outlook.com"
-                target="_blank"
-            >
-                <span>Email</span>
-            </Button>
-        </div>
+        <ul class="">
+            <li>
+                <a
+                    href="https://x.com/NotCellium"
+                    target="_blank"
+                    class="text-foreground-muted text-2xl lg:text-3xl font-medium tracking-tighter hover:text-foreground transition-colors duration-300"
+                >
+                    X
+                </a>
+            </li>
+            <li>
+                <a
+                    href="mailto:jaydenux@outlook.com"
+                    class="text-foreground-muted text-2xl lg:text-3xl font-medium tracking-tighter hover:text-foreground transition-colors duration-300"
+                >
+                    Email
+                </a>
+            </li>
+        </ul>
     </section>
 </main>

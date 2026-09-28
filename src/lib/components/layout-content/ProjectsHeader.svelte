@@ -1,5 +1,6 @@
 <script lang="ts">
     import { RiArrowRightUpLongLine } from "svelte-remixicon";
+    import { reveal } from "$lib/actions/motion";
 
     let { title, year, url }: { title: string; year: string; url: string } =
         $props();
@@ -7,10 +8,11 @@
 
 <section
     class="px-6 lg:px-12 flex flex-col md:grid md:grid-cols-2 items-start gap-6"
+    use:reveal
 >
     <div class="space-y-1.5 md:space-y-3">
         <p class="font-medium">Project</p>
-        <h1 class="text-5xl lg:text-6xl xl:text-7xl uppercase font-condensed">
+        <h1 class="text-5xl lg:text-6xl xl:text-7xl font-condensed">
             {title}
         </h1>
     </div>
@@ -19,7 +21,7 @@
         <div class="space-y-1.5 md:space-y-3">
             <p class="font-medium">Year</p>
             <span
-                class="text-5xl lg:text-6xl xl:text-7xl font-condensed tracking-tighter uppercase"
+                class="text-5xl lg:text-6xl xl:text-7xl font-condensed tracking-tighter"
             >
                 {year}
             </span>
@@ -33,7 +35,7 @@
                 class="inline-flex items-center group"
             >
                 <span
-                    class="text-5xl lg:text-6xl xl:text-7xl font-condensed tracking-tight uppercase"
+                    class="text-5xl lg:text-6xl xl:text-7xl font-condensed tracking-tight"
                 >
                     Visit
                 </span>

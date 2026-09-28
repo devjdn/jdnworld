@@ -60,8 +60,7 @@
     /* --- Base layer --- */
     --background: oklch(1 0 0);
     --foreground: oklch(0.09 0 0);
-    --foreground-muted: oklch(0.45 0 0);
-    --foreground-subtle: oklch(0.65 0 0);
+    --foreground-muted: oklch(0.65 0 0);
 
     /* --- Surface (sits on background) --- */
     --surface: oklch(0.97 0 0);
@@ -94,12 +93,12 @@
     /* --- Accent (decorative, not contrast-critical) --- */
     --accent: oklch(0.09 0 0);
     --accent-foreground: oklch(1 0 0);
-    --accent-subtle: oklch(0.93 0 0);
+    --accent-muted: oklch(0.93 0 0);
 
     /* --- Feedback --- */
     --destructive: oklch(0.577 0.245 27.325);
     --destructive-foreground: oklch(1 0 0);
-    --destructive-subtle: oklch(0.96 0.02 27.325);
+    --destructive-muted: oklch(0.96 0.02 27.325);
 
     /* --- Input --- */
     --input: oklch(0.88 0 0);
@@ -117,7 +116,6 @@
     --background: oklch(0 0 0);
     --foreground: oklch(0.97 0 0);
     --foreground-muted: oklch(0.55 0 0);
-    --foreground-subtle: oklch(0.38 0 0);
 
     /* --- Surface (sits on background) --- */
     --surface: oklch(0.23 0 0);
@@ -150,12 +148,12 @@
     /* --- Accent (decorative, not contrast-critical) --- */
     --accent: oklch(0.97 0 0);
     --accent-foreground: oklch(0 0 0);
-    --accent-subtle: oklch(0.16 0 0);
+    --accent-muted: oklch(0.16 0 0);
 
     /* --- Feedback --- */
     --destructive: oklch(0.65 0.22 27.325);
     --destructive-foreground: oklch(0 0 0);
-    --destructive-subtle: oklch(0.15 0.04 27.325);
+    --destructive-muted: oklch(0.15 0.04 27.325);
 
     /* --- Input --- */
     --input: oklch(1 0 0 / 12%);
@@ -166,8 +164,7 @@
     /* Base */
     --background: oklch(70.5% 0.213 47.604);
     --foreground: oklch(12% 0.04 47.604);
-    --foreground-muted: oklch(25% 0.035 47.604);
-    --foreground-subtle: oklch(38% 0.03 47.604);
+    --foreground-muted: oklch(38% 0.03 47.604);
 
     /* Surface */
     --surface: oklch(65% 0.21 47.604);
@@ -194,42 +191,75 @@
     /* Accent */
     --accent: oklch(12% 0.04 47.604);
     --accent-foreground: oklch(70.5% 0.213 47.604);
-    --accent-subtle: oklch(65% 0.21 47.604);
+    --accent-muted: oklch(65% 0.21 47.604);
+}
+
+.theme-projects {
+    /* Base */
+    --background: oklch(0.3121 0.0993 30.77);
+    --foreground: oklch(0.9851 0.0404 107.12);
+    --foreground-muted: oklch(0.72 0.03 107.12);
+
+    /* Surface */
+    --surface: oklch(0.35 0.095 30.77);
+    --surface-foreground: oklch(0.9851 0.0404 107.12);
+    --surface-foreground-muted: oklch(0.75 0.03 107.12);
+    --surface-border: oklch(0.4 0.09 30.77);
+
+    /* Surface raised */
+    --surface-raised: oklch(0.4 0.095 30.77);
+    --surface-raised-foreground: oklch(0.9851 0.0404 107.12);
+    --surface-raised-foreground-muted: oklch(0.72 0.03 107.12);
+    --surface-raised-border: oklch(0.45 0.09 30.77);
+
+    /* Border */
+    --border: oklch(0.4 0.09 30.77);
+
+    /* Interactive */
+    --interactive: oklch(0.9851 0.0404 107.12);
+    --interactive-foreground: oklch(0.3121 0.0993 30.77);
+    --interactive-hover: oklch(0.9 0.045 107.12);
+    --interactive-muted: oklch(0.35 0.095 30.77);
+    --interactive-muted-foreground: oklch(0.9851 0.0404 107.12);
+
+    /* Accent */
+    --accent: oklch(0.9851 0.0404 107.12);
+    --accent-foreground: oklch(0.3121 0.0993 30.77);
+    --accent-muted: oklch(0.35 0.095 30.77);
 }
 
 .theme-about {
     /* Base */
-    --background: oklch(72% 0.18 5);
-    --foreground: oklch(12% 0.04 5);
-    --foreground-muted: oklch(25% 0.035 5);
-    --foreground-subtle: oklch(38% 0.03 5);
+    --background: oklch(0.7612 0.1611 73.8);
+    --foreground: oklch(0.1373 0.0054 107.08);
+    --foreground-muted: oklch(0.3 0.04 80);
 
     /* Surface */
-    --surface: oklch(67% 0.175 5);
-    --surface-foreground: oklch(12% 0.04 5);
-    --surface-foreground-muted: oklch(25% 0.035 5);
-    --surface-border: oklch(62% 0.165 5);
+    --surface: oklch(0.71 0.155 73.8);
+    --surface-foreground: oklch(0.1373 0.0054 107.08);
+    --surface-foreground-muted: oklch(0.28 0.04 80);
+    --surface-border: oklch(0.66 0.145 73.8);
 
     /* Surface raised */
-    --surface-raised: oklch(64% 0.17 5);
-    --surface-raised-foreground: oklch(12% 0.04 5);
-    --surface-raised-foreground-muted: oklch(25% 0.035 5);
-    --surface-raised-border: oklch(59% 0.16 5);
+    --surface-raised: oklch(0.68 0.15 73.8);
+    --surface-raised-foreground: oklch(0.1373 0.0054 107.08);
+    --surface-raised-foreground-muted: oklch(0.25 0.04 80);
+    --surface-raised-border: oklch(0.63 0.14 73.8);
 
     /* Border */
-    --border: oklch(64% 0.165 5);
+    --border: oklch(0.66 0.145 73.8);
 
     /* Interactive */
-    --interactive: oklch(12% 0.04 5);
-    --interactive-foreground: oklch(97% 0 0);
-    --interactive-hover: oklch(22% 0.04 5);
-    --interactive-muted: oklch(67% 0.175 5);
-    --interactive-muted-foreground: oklch(12% 0.04 5);
+    --interactive: oklch(0.1373 0.0054 107.08);
+    --interactive-foreground: oklch(0.7612 0.1611 73.8);
+    --interactive-hover: oklch(0.22 0.008 107.08);
+    --interactive-muted: oklch(0.71 0.155 73.8);
+    --interactive-muted-foreground: oklch(0.1373 0.0054 107.08);
 
     /* Accent */
-    --accent: oklch(12% 0.04 5);
-    --accent-foreground: oklch(72% 0.18 5);
-    --accent-subtle: oklch(67% 0.175 5);
+    --accent: oklch(0.1373 0.0054 107.08);
+    --accent-foreground: oklch(0.7612 0.1611 73.8);
+    --accent-muted: oklch(0.68 0.15 73.8);
 }
 
 @theme inline {
@@ -241,7 +271,6 @@
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --color-foreground-muted: var(--foreground-muted);
-    --color-foreground-subtle: var(--foreground-subtle);
 
     /* Surface */
     --color-surface: var(--surface);
@@ -276,12 +305,12 @@
     /* Accent */
     --color-accent: var(--accent);
     --color-accent-foreground: var(--accent-foreground);
-    --color-accent-subtle: var(--accent-subtle);
+    --color-accent-muted: var(--accent-muted);
 
     /* Feedback */
     --color-destructive: var(--destructive);
     --color-destructive-foreground: var(--destructive-foreground);
-    --color-destructive-subtle: var(--destructive-subtle);
+    --color-destructive-muted: var(--destructive-muted);
 
     /* Input */
     --color-input: var(--input);

@@ -1,13 +1,19 @@
 <script lang="ts">
+    import { reveal } from "$lib/actions/motion";
     import type { Snippet } from "svelte";
 
     let { heading, children }: { heading: string; children?: Snippet<[]> } =
         $props();
 </script>
 
-<div class="not-md:space-y-1.5 md:space-y-3 md:grid md:grid-cols-2 md:gap-8">
+<div
+    class="not-md:space-y-1.5 md:space-y-3 md:grid md:grid-cols-2 md:gap-6"
+    use:reveal
+>
     <div>
-        <h2 class="font-medium lg:text-2xl">{heading}</h2>
+        <h2 class="text-2xl lg:text-3xl font-medium tracking-tighter">
+            {heading}
+        </h2>
     </div>
 
     {@render children?.()}

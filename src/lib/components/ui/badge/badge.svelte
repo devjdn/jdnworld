@@ -10,7 +10,7 @@
                 secondary:
                     "bg-surface text-surface-foreground hover:bg-surface-raised",
                 destructive:
-                    "bg-destructive-subtle text-destructive border-destructive/20 hover:bg-destructive/15 focus-visible:border-destructive/40 focus-visible:ring-destructive/20",
+                    "bg-destructive-muted text-destructive border-destructive/20 hover:bg-destructive/15 focus-visible:border-destructive/40 focus-visible:ring-destructive/20",
                 outline:
                     "bg-surface text-foreground border-border hover:bg-surface-raised hover:border-surface-raised-border",
                 ghost: "text-foreground-muted hover:bg-surface hover:text-foreground",

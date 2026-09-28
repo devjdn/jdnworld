@@ -1,14 +1,19 @@
-<main class="pt-12 pb-36 md:pt-24 md:pb-48 space-y-12 lg:space-y-24">
-    <section class="px-6 lg:px-12">
-        <h1 class="text-5xl lg:text-6xl xl:text-7xl uppercase font-condensed">
-            About
-        </h1>
+<script lang="ts">
+    import { reveal, staggerChildren } from "$lib/actions/motion";
+</script>
+
+<main class="pt-24 pb-36 md:pb-48 space-y-24">
+    <section class="px-6 lg:px-12" use:reveal>
+        <h1 class="text-5xl lg:text-6xl xl:text-7xl font-condensed">About</h1>
     </section>
 
-    <section class="px-6 lg:px-12 grid grid-cols-1 gap-x-6 gap-y-6 md:gap-y-12">
+    <section
+        class="px-6 lg:px-12 grid grid-cols-1 gap-x-6 gap-y-12"
+        use:staggerChildren={{ gap: 0.1 }}
+    >
         <article class="not-md:space-y-3 md:grid md:grid-cols-2 md:gap-6">
             <div>
-                <h2 class="lg:text-2xl font-medium text-foreground-subtle">
+                <h2 class="text-2xl lg:text-3xl font-medium tracking-tighter">
                     Summary
                 </h2>
             </div>
@@ -24,7 +29,7 @@
 
         <article class="not-md:space-y-3 md:grid md:grid-cols-2 md:gap-6">
             <div>
-                <h2 class="lg:text-2xl font-medium text-foreground-subtle">
+                <h2 class="text-2xl lg:text-3xl font-medium tracking-tighter">
                     Development Philosophy
                 </h2>
             </div>
@@ -44,7 +49,7 @@
             class="not-md:space-y-3 md:grid md:grid-cols-2 justify-between md:gap-6"
         >
             <div>
-                <h2 class="lg:text-2xl font-medium text-foreground-subtle">
+                <h2 class="text-2xl lg:text-3xl font-medium tracking-tighter">
                     Love of Music
                 </h2>
             </div>
@@ -67,7 +72,25 @@
 
         <article class="not-md:space-y-3 md:grid md:grid-cols-2 md:gap-6">
             <div>
-                <h2 class="lg:text-2xl font-medium text-foreground-subtle">
+                <h2 class="text-2xl lg:text-3xl font-medium tracking-tighter">
+                    Music In My Design
+                </h2>
+            </div>
+            <div>
+                <p class="max-w-prose lg:text-2xl">
+                    You may notice that this portfolio site has some really
+                    random colour schemes across the pages. Outside of dedicated
+                    project pages, I have tried to implement colour schemes
+                    directly inspired from some of my favourite albums. I hope
+                    it isn't too distracting. If you like it, feel free to guess
+                    which albums each scheme is inspired by :)
+                </p>
+            </div>
+        </article>
+
+        <article class="not-md:space-y-3 md:grid md:grid-cols-2 md:gap-6">
+            <div>
+                <h2 class="text-2xl lg:text-3xl font-medium tracking-tighter">
                     Football
                 </h2>
             </div>

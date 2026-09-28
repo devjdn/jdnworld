@@ -27,7 +27,7 @@
 
                 // Destructive — feedback track
                 destructive:
-                    "bg-destructive-subtle text-destructive border-destructive/20 hover:bg-destructive/15 focus-visible:border-destructive/40 focus-visible:ring-destructive/20",
+                    "bg-destructive-muted text-destructive border-destructive/20 hover:bg-destructive/15 focus-visible:border-destructive/40 focus-visible:ring-destructive/20",
 
                 // Link — text only, no background
                 link: "text-foreground-muted hover:text-foreground",
