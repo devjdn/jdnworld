@@ -12,7 +12,7 @@
 >
     <div class="space-y-1.5 md:space-y-3">
         <p class="font-medium">Project</p>
-        <h1 class="text-5xl lg:text-6xl xl:text-7xl font-condensed">
+        <h1 class="text-5xl lg:text-6xl xl:text-7xl">
             {title}
         </h1>
     </div>
@@ -21,7 +21,7 @@
         <div class="space-y-1.5 md:space-y-3">
             <p class="font-medium">Year</p>
             <span
-                class="text-5xl lg:text-6xl xl:text-7xl font-condensed tracking-tighter"
+                class="text-5xl lg:text-6xl xl:text-7xl font-medium tracking-[-0.04em]"
             >
                 {year}
             </span>
@@ -35,7 +35,7 @@
                 class="inline-flex items-center group"
             >
                 <span
-                    class="text-5xl lg:text-6xl xl:text-7xl font-condensed tracking-tight"
+                    class="text-5xl lg:text-6xl xl:text-7xl font-medium tracking-[-0.04em]"
                 >
                     Visit
                 </span>

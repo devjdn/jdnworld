@@ -3,6 +3,7 @@
     import ProjectsHeader from "$lib/components/layout-content/ProjectsHeader.svelte";
     import ProjectInformation from "$lib/components/layout-content/ProjectInformation.svelte";
     import { staggerChildren } from "$lib/actions/motion";
+    import { projectHeroSizes, projectSideSizes } from "$lib/constants";
 </script>
 
 <main class="pt-12 pb-36 md:pt-24 md:pb-48 space-y-12">
@@ -16,24 +17,33 @@
         class="px-6 lg:px-12 flex-1 flex flex-col md:grid md:grid-cols-[1.65fr_1fr] md:grid-rows-2 gap-1.5 md:aspect-16/7"
         use:staggerChildren={{ gap: 0.08 }}
     >
-        <div class="overflow-hidden row-span-2">
-            <img
-                src="/images/toolbase-hero-preview.webp"
+        <div class="overflow-hidden row-span-2 bg-surface">
+            <enhanced:img
+                src="$lib/assets/toolbase-hero-preview.webp"
+                sizes={projectHeroSizes}
                 alt="ToolBase full app view"
+                loading="eager"
+                fetchpriority="high"
                 class="w-full h-full object-cover object-center"
             />
         </div>
-        <div class="overflow-hidden">
-            <img
-                src="/images/toolbase-closeup-preview.webp"
+        <div class="overflow-hidden bg-surface">
+            <enhanced:img
+                src="$lib/assets/toolbase-closeup-preview.webp"
+                sizes={projectSideSizes}
                 alt="ToolBase category navigation"
+                loading="lazy"
+                decoding="async"
                 class="w-full h-full object-cover object-center"
             />
         </div>
-        <div class="overflow-hidden">
-            <img
-                src="/images/toolbase-cmdpalette-preview.webp"
-                alt="ToolBase tool card grid"
+        <div class="overflow-hidden bg-surface">
+            <enhanced:img
+                src="$lib/assets/toolbase-cmdpalette-preview.webp"
+                sizes={projectSideSizes}
+                alt="ToolBase command palette preview"
+                loading="lazy"
+                decoding="async"
                 class="w-full h-full object-cover object-center"
             />
         </div>

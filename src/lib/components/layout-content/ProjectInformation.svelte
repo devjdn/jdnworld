@@ -11,7 +11,7 @@
     use:reveal
 >
     <div>
-        <h2 class="text-2xl lg:text-3xl font-medium tracking-tighter">
+        <h2>
             {heading}
         </h2>
     </div>

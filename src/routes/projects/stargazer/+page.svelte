@@ -3,6 +3,7 @@
     import ProjectsHeader from "$lib/components/layout-content/ProjectsHeader.svelte";
     import ProjectInformation from "$lib/components/layout-content/ProjectInformation.svelte";
     import { staggerChildren } from "$lib/actions/motion";
+    import { projectHeroSizes, projectSideSizes } from "$lib/constants";
 </script>
 
 <main class="pt-12 pb-36 md:pt-24 md:pb-48 space-y-12">
@@ -16,24 +17,33 @@
         class="px-6 lg:px-12 flex-1 flex flex-col md:grid md:grid-cols-[1.65fr_1fr] md:grid-rows-2 gap-1.5 md:aspect-16/7"
         use:staggerChildren={{ gap: 0.08 }}
     >
-        <div class="overflow-hidden row-span-2">
-            <img
-                src="/images/stargazer-hero-preview.webp"
+        <div class="overflow-hidden row-span-2 bg-surface">
+            <enhanced:img
+                src="$lib/assets/stargazer-hero-preview.webp"
+                sizes={projectHeroSizes}
                 alt="Stargazer project preview"
+                loading="eager"
+                fetchpriority="high"
                 class="w-full h-full object-cover object-center"
             />
         </div>
-        <div class="overflow-hidden">
-            <img
-                src="/images/stargazer-epic-closeup-preview.webp"
+        <div class="overflow-hidden bg-surface">
+            <enhanced:img
+                src="$lib/assets/stargazer-epic-closeup-preview.webp"
+                sizes={projectSideSizes}
                 alt="Stargazer EPIC closeup"
+                loading="lazy"
+                decoding="async"
                 class="w-full h-full object-cover object-center"
             />
         </div>
-        <div class="overflow-hidden">
-            <img
-                src="/images/stargazer-neows-preview.webp"
+        <div class="overflow-hidden bg-surface">
+            <enhanced:img
+                src="$lib/assets/stargazer-neows-preview.webp"
+                sizes={projectSideSizes}
                 alt="Stargazer NEOWS"
+                loading="lazy"
+                decoding="async"
                 class="w-full h-full object-cover object-center"
             />
         </div>

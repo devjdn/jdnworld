@@ -34,13 +34,13 @@
     font-style: normal;
     font-display: swap;
 }
-@font-face {
+/*@font-face {
     font-family: "Suisse Int'l Condensed";
     src: url("$lib/fonts/SuisseIntlCond-Medium-WebS.woff2") format("woff2");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
-}
+}*/
 @font-face {
     font-family: "Suisse Int'l";
     src: url("$lib/fonts/SuisseIntl-Semibold.woff2") format("woff2");
@@ -264,7 +264,7 @@
 
 @theme inline {
     --font-sans: "Suisse Int'l", sans-serif;
-    --font-condensed: "Suisse Int'l Condensed", sans-serif;
+    /*--font-condensed: "Suisse Int'l Condensed", sans-serif;*/
     --font-weight-book: var(--book);
 
     /* Base */
@@ -342,6 +342,15 @@
     h4,
     h5,
     h6,
+    p {
+        @apply leading-[1.4];
+    }
+    h1 {
+        @apply font-medium tracking-[-0.04em];
+    }
+    h2 {
+        @apply text-2xl lg:text-3xl font-medium tracking-[-0.04em];
+    }
     p {
         @apply tracking-[-0.02em];
     }

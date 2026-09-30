@@ -4,7 +4,7 @@
 
 <main class="pt-24 pb-36 md:pb-48 space-y-24">
     <section class="px-6 lg:px-12" use:reveal>
-        <h1 class="text-5xl lg:text-6xl xl:text-7xl font-condensed">About</h1>
+        <h1 class="text-5xl lg:text-6xl xl:text-7xl">About</h1>
     </section>
 
     <section
@@ -13,25 +13,22 @@
     >
         <article class="not-md:space-y-3 md:grid md:grid-cols-2 md:gap-6">
             <div>
-                <h2 class="text-2xl lg:text-3xl font-medium tracking-tighter">
-                    Summary
-                </h2>
+                <h2>Summary</h2>
             </div>
             <div>
                 <p class="max-w-prose lg:text-2xl">
-                    I'm Jayden, a 20 year old frontend web developer from the
-                    UK. However, I have passions beyond the work I do. Beyond
-                    it, I love listening to music, playing video games, and
-                    watching football; just to name a few.
+                    I'm Jayden, a 20 year old frontend web developer going for a
+                    BSc in Applied Computing, from the UK. However, I have
+                    passions beyond the work I do. Beyond it, I love listening
+                    to music, playing video games, and watching football; just
+                    to name a few.
                 </p>
             </div>
         </article>
 
         <article class="not-md:space-y-3 md:grid md:grid-cols-2 md:gap-6">
             <div>
-                <h2 class="text-2xl lg:text-3xl font-medium tracking-tighter">
-                    Development Philosophy
-                </h2>
+                <h2>Development Philosophy</h2>
             </div>
             <div>
                 <p class="max-w-prose lg:text-2xl">
@@ -49,9 +46,7 @@
             class="not-md:space-y-3 md:grid md:grid-cols-2 justify-between md:gap-6"
         >
             <div>
-                <h2 class="text-2xl lg:text-3xl font-medium tracking-tighter">
-                    Love of Music
-                </h2>
+                <h2>Love of Music</h2>
             </div>
             <div>
                 <p class="max-w-prose lg:text-2xl">
@@ -72,9 +67,7 @@
 
         <article class="not-md:space-y-3 md:grid md:grid-cols-2 md:gap-6">
             <div>
-                <h2 class="text-2xl lg:text-3xl font-medium tracking-tighter">
-                    Music In My Design
-                </h2>
+                <h2>Music In My Design</h2>
             </div>
             <div>
                 <p class="max-w-prose lg:text-2xl">
@@ -90,9 +83,7 @@
 
         <article class="not-md:space-y-3 md:grid md:grid-cols-2 md:gap-6">
             <div>
-                <h2 class="text-2xl lg:text-3xl font-medium tracking-tighter">
-                    Football
-                </h2>
+                <h2>Football</h2>
             </div>
             <div>
                 <p class="max-w-prose lg:text-2xl">

@@ -3,7 +3,7 @@
     import { RiArrowRightUpLongLine } from "svelte-remixicon";
 </script>
 
-<header style="background-color: oklch(from var(--background) l c h / 0.01);">
+<header>
     <!-- <div
         id="header-blur-backdrop"
         class="pointer-events-none absolute grid h-16 inset-0"
@@ -42,11 +42,17 @@
     <div
         class="h-14 px-6 lg:px-12 isolate z-10 w-full flex items-center justify-between lg:grid lg:grid-cols-2 gap-3 text-lg"
     >
-        <a href="/" class="font-medium tracking-tight w-fit">
-            <span class="">jdn.world</span>
+        <a
+            href="/"
+            class="w-fit"
+            aria-label="Return home link containing wordmark jdn.world logo"
+        >
+            <span class="font-medium tracking-tight">jdn.world</span>
         </a>
         <nav class="hidden lg:block">
-            <ul class="font-medium tracking-tight grid grid-cols-3">
+            <ul
+                class="font-medium tracking-tight grid grid-cols-3 leading-[1.4]"
+            >
                 <li class="w-fit"><a href="/projects">Projects</a></li>
                 <li class="w-fit"><a href="/about">About</a></li>
                 <li class="w-fit">
