@@ -7,18 +7,20 @@
 </script>
 
 <section
-    class="px-6 lg:px-12 flex flex-col md:grid md:grid-cols-2 items-start gap-6"
+    class="col-span-full grid grid-cols-subgrid items-start gap-y-gutter"
     use:reveal
 >
-    <div class="space-y-1.5 md:space-y-3">
+    <div class="col-span-full md:col-span-6 space-y-1.5 md:space-y-3">
         <p class="font-medium">Project</p>
         <h1 class="text-5xl lg:text-6xl xl:text-7xl">
             {title}
         </h1>
     </div>
 
-    <div class="flex flex-col w-full md:grid md:grid-cols-2 gap-6">
-        <div class="space-y-1.5 md:space-y-3">
+    <div
+        class="col-span-full md:col-span-6 md:col-start-7 grid grid-cols-subgrid gap-y-gutter"
+    >
+        <div class="col-span-full md:col-span-3 space-y-1.5 md:space-y-3">
             <p class="font-medium">Year</p>
             <span
                 class="text-5xl lg:text-6xl xl:text-7xl font-medium tracking-[-0.04em]"
@@ -27,7 +29,9 @@
             </span>
         </div>
 
-        <div class="space-y-1.5 md:space-y-3 md:place-self-end">
+        <div
+            class="col-span-full md:col-span-3 space-y-1.5 md:space-y-3 md:place-self-end"
+        >
             <p class="font-medium">Website</p>
             <a
                 href={url}

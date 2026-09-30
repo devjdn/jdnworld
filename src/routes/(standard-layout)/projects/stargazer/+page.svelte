@@ -6,15 +6,15 @@
     import { projectHeroSizes, projectSideSizes } from "$lib/constants";
 </script>
 
-<main class="pt-12 pb-36 md:pt-24 md:pb-48 space-y-12">
+<div class="col-span-full grid grid-cols-subgrid gap-y-group">
     <ProjectsHeader
         title="Stargazer"
-        year="2026 Q1+2"
+        year="2026"
         url="https://stargazer.jdn.world"
     />
 
     <section
-        class="px-6 lg:px-12 flex-1 flex flex-col md:grid md:grid-cols-[1.65fr_1fr] md:grid-rows-2 gap-1.5 md:aspect-16/7"
+        class="col-span-full flex flex-col md:grid md:grid-cols-[1.65fr_1fr] md:grid-rows-2 gap-1.5 md:aspect-16/7"
         use:staggerChildren={{ gap: 0.08 }}
     >
         <div class="overflow-hidden row-span-2 bg-surface">
@@ -50,7 +50,7 @@
     </section>
 
     <section
-        class="px-6 lg:px-12 space-y-6 lg:space-y-12"
+        class="col-span-full grid grid-cols-subgrid gap-y-gutter lg:gap-y-group"
         use:staggerChildren={{ gap: 0.08 }}
     >
         <ProjectInformation heading="Project Description">
@@ -76,7 +76,7 @@
             </div>
         </ProjectInformation>
 
-        <div class="h-0 border-t"></div>
+        <div class="col-span-full h-0 border-t"></div>
 
         <ProjectInformation heading="Tech Stack">
             <div class="flex gap-1 flex-wrap">
@@ -93,7 +93,7 @@
             </div>
         </ProjectInformation>
 
-        <div class="h-0 border-t"></div>
+        <div class="col-span-full h-0 border-t"></div>
 
         <ProjectInformation heading="Fonts & Icon Libraries">
             <ul class="list-disc list-inside lg:text-2xl lg:tracking-[-0.02em]">
@@ -106,4 +106,4 @@
             </ul>
         </ProjectInformation>
     </section>
-</main>
+</div>

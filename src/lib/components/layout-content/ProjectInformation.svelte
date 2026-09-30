@@ -6,15 +6,14 @@
         $props();
 </script>
 
-<div
-    class="not-md:space-y-1.5 md:space-y-3 md:grid md:grid-cols-2 md:gap-6"
-    use:reveal
->
-    <div>
+<div class="col-span-full grid grid-cols-subgrid gap-y-1.5" use:reveal>
+    <div class="col-span-full md:col-span-6">
         <h2>
             {heading}
         </h2>
     </div>
 
-    {@render children?.()}
+    <div class="col-span-full md:col-span-6 md:col-start-7">
+        {@render children?.()}
+    </div>
 </div>

@@ -13,7 +13,7 @@
     <link rel="icon" href={favicon} />
 </svelte:head>
 
-<div
+<main
     class={cn(
         "flex flex-col min-h-lvh relative bg-background text-foreground",
         page.data.theme ?? "",
@@ -21,14 +21,18 @@
 >
     <ModeWatcher defaultMode="system" />
 
-    {@render children()}
+    <main
+        class="grid grid-cols-4 md:grid-cols-12 gap-x-gutter gap-y-section px-margin pb-section"
+    >
+        {@render children()}
+    </main>
 
     <footer class="bg-surface space-y-24">
         <div
-            class="grid gap-6 md:grid-cols-2 leading-[1.4] px-6 lg:px-12 py-6 lg:py-12"
+            class="grid gap-gutter md:grid-cols-2 px-margin lg:px-12 py-margin lg:py-margin"
         >
             <div>
-                <p class="text-2xl lg:text-3xl font-medium tracking-tighter">
+                <p class="text-2xl lg:text-3xl font-medium tracking-[-0.04em]">
                     I'm located in the UK, but you talk to me via
                 </p>
             </div>
@@ -38,7 +42,7 @@
                     <a
                         href="https://x.com/NotCellium"
                         target="_blank"
-                        class="text-foreground-muted text-2xl lg:text-3xl font-medium tracking-tighter hover:text-foreground transition-colors duration-300"
+                        class="text-foreground-muted text-2xl lg:text-3xl font-medium tracking-[-0.04em] hover:text-foreground transition-colors duration-300"
                     >
                         X
                     </a>
@@ -46,7 +50,7 @@
                 <li>
                     <a
                         href="mailto:jaydenux@outlook.com"
-                        class="text-foreground-muted text-2xl lg:text-3xl font-medium tracking-tighter hover:text-foreground transition-colors duration-300"
+                        class="text-foreground-muted text-2xl lg:text-3xl font-medium tracking-[-0.04em] hover:text-foreground transition-colors duration-300"
                     >
                         Email
                     </a>
@@ -65,4 +69,4 @@
             />
         </svg>
     </footer>
-</div>
+</main>

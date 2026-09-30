@@ -339,6 +339,8 @@
     --text-base--line-height: 1.5rem; /* 24px, 1u */
     --text-2xl--line-height: 2.25rem; /* 36px, 1.5u */
     --text-3xl--line-height: 2.25rem; /* 36px, 1.5u */
+    --text-5xl--line-height: 3.75rem; /* 60px, 2.5u */
+    --text-6xl--line-height: 4.5rem; /* 72px, 3u */
 }
 
 @media (min-width: 48rem) {
@@ -348,8 +350,7 @@
     }
 }
 
-/* Unused for now. Switch to this if a third element needs to bleed and
-   duplicating the grid definition starts to feel error-prone. */
+/* Unused for now, switch if beginning to repeat -margin grid layout */
 @utility page-grid {
     display: grid;
     column-gap: var(--spacing-gutter);
