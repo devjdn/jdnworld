@@ -4,7 +4,6 @@
     import { ModeWatcher } from "mode-watcher";
     import { page } from "$app/state";
     import { cn } from "$lib/utils";
-    import Header from "$lib/components/header/Header.svelte";
 
     let { children } = $props();
 </script>
@@ -21,15 +20,16 @@
     )}
 >
     <ModeWatcher defaultMode="system" />
-    <Header />
 
     {@render children()}
 
-    <footer class="px-6 lg:px-12 py-6 lg:py-12 bg-surface space-y-24">
-        <div class="grid gap-6 md:grid-cols-2 leading-[1.4]">
+    <footer class="bg-surface space-y-24">
+        <div
+            class="grid gap-6 md:grid-cols-2 leading-[1.4] px-6 lg:px-12 py-6 lg:py-12"
+        >
             <div>
                 <p class="text-2xl lg:text-3xl font-medium tracking-tighter">
-                    I'm located in the UK, but you talk to me on
+                    I'm located in the UK, but you talk to me via
                 </p>
             </div>
 
@@ -56,7 +56,7 @@
 
         <svg
             viewBox="0 0 942 216"
-            class="block w-full h-auto text-foreground-muted"
+            class="block w-full h-auto col-span-full -rotate-180 text-foreground-muted"
             xmlns="http://www.w3.org/2000/svg"
         >
             <path

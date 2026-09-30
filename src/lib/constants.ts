@@ -1,3 +1,19 @@
+export const siteLinks = [
+  {
+    name: "Projects",
+    href: "/projects",
+  },
+  {
+    name: "About",
+    href: "/about",
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/devjdn",
+    target: "_blank",
+  },
+];
+
 export const categories = [
   {
     label: "Languages",

@@ -263,7 +263,7 @@
 }
 
 @theme inline {
-    --font-sans: "Suisse Int'l", sans-serif;
+    --font-sans: "Suisse Int'l", ui-sans-serif, system-ui, sans-serif;
     /*--font-condensed: "Suisse Int'l Condensed", sans-serif;*/
     --font-weight-book: var(--book);
 
@@ -326,6 +326,47 @@
     --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+/* --- Spacing: every value is a multiple of 1u (1.5rem, the body line-height) --- */
+@theme {
+    --spacing-gutter: 1.5rem; /* 1u  column gap */
+    --spacing-margin: 1.5rem; /* 1u  page margin (2u from md up) */
+    --spacing-group: 3rem; /* 2u  related items within a section */
+    --spacing-section: 6rem; /* 4u  between sections (8u from md up) */
+    --spacing-pause: 24rem; /* 16u rare dramatic breaks */
+
+    /* --- Line-heights: half-unit steps (12px) so text rows add up to the grid --- */
+    --text-sm--line-height: 1.5rem; /* 24px, 1u */
+    --text-base--line-height: 1.5rem; /* 24px, 1u */
+    --text-2xl--line-height: 2.25rem; /* 36px, 1.5u */
+    --text-3xl--line-height: 2.25rem; /* 36px, 1.5u */
+}
+
+@media (min-width: 48rem) {
+    :root {
+        --spacing-margin: 3rem; /* 2u */
+        --spacing-section: 12rem; /* 8u */
+    }
+}
+
+/* Unused for now. Switch to this if a third element needs to bleed and
+   duplicating the grid definition starts to feel error-prone. */
+@utility page-grid {
+    display: grid;
+    column-gap: var(--spacing-gutter);
+    /* margin columns are (margin - gutter) wide, because the gap adds the gutter back */
+    grid-template-columns:
+        [full-start] calc(var(--spacing-margin) - var(--spacing-gutter))
+        [content-start] repeat(4, minmax(0, 1fr)) [content-end]
+        calc(var(--spacing-margin) - var(--spacing-gutter)) [full-end];
+
+    @media (width >= 48rem) {
+        grid-template-columns:
+            [full-start] calc(var(--spacing-margin) - var(--spacing-gutter))
+            [content-start] repeat(12, minmax(0, 1fr)) [content-end]
+            calc(var(--spacing-margin) - var(--spacing-gutter)) [full-end];
+    }
+}
+
 @layer base {
     * {
         @apply border-border outline-ring/50;
@@ -335,15 +376,6 @@
     }
     html {
         @apply overscroll-y-none;
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p {
-        @apply leading-[1.4];
     }
     h1 {
         @apply font-medium tracking-[-0.04em];
