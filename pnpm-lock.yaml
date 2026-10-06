@@ -21,9 +21,6 @@ importers:
         specifier: ^0.3.2
         version: 0.3.2(svelte@5.57.1)
     devDependencies:
-      '@iconify/svelte':
-        specifier: ^5.2.2
-        version: 5.2.2(svelte@5.57.1)
       '@lucide/svelte':
         specifier: ^1.48.0
         version: 1.48.0(svelte@5.57.1)
@@ -263,14 +260,6 @@ packages:
 
   '@floating-ui/utils@0.2.12':
     resolution: {integrity: sha512-HpCo8tmWzLVad5s2d19EhAz5zqrrQ6s69qd6moPMQvkOuSwDT1YgRfWSVuc4ennqrgv3OHppiOGMQ7oC13yIww==}
-
-  '@iconify/svelte@5.2.2':
-    resolution: {integrity: sha512-XMXxD3nzH7yB68C3K4sNwzrJ1TBscODR0ZqCeNf0KGuEMCTSuCo0jHNDZ0o0iRXTylO41NSz/DWam/4atLG1yw==}
-    peerDependencies:
-      svelte: '>5.0.0'
-
-  '@iconify/types@2.0.0':
-    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
 
   '@img/colour@1.1.0':
     resolution: {integrity: sha512-Td76q7j57o/tLVdgS746cYARfSyxk8iEfRxewL9h4OMzYhbW4TAcppl0mT4eyqXddh6L/jwoM75mo7ixa/pCeQ==}
@@ -1796,13 +1785,6 @@ snapshots:
       '@floating-ui/utils': 0.2.12
 
   '@floating-ui/utils@0.2.12': {}
-
-  '@iconify/svelte@5.2.2(svelte@5.57.1)':
-    dependencies:
-      '@iconify/types': 2.0.0
-      svelte: 5.57.1
-
-  '@iconify/types@2.0.0': {}
 
   '@img/colour@1.1.0': {}
 

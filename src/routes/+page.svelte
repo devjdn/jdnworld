@@ -1,10 +1,13 @@
 <script lang="ts">
-    import Icon from "@iconify/svelte";
     import { categories, siteLinks } from "$lib/constants";
     import { RiArrowRightUpLongLine } from "svelte-remixicon";
+    import { stack } from "$lib/attachments/panel-stack";
 </script>
 
-<header class="col-span-full -mx-margin flex flex-col gap-y-group">
+<header
+    class="col-span-full -mx-margin flex flex-col gap-y-group pb-margin bleed-stack-panel"
+    {@attach stack}
+>
     <svg
         viewBox="0 0 942 216"
         class="block w-full h-auto col-span-full"
@@ -16,13 +19,31 @@
         />
     </svg>
 
-    <nav class="px-margin grid grid-cols-4 md:grid-cols-12 gap-x-gutter">
+    <div
+        class="px-margin grid grid-cols-4 md:grid-cols-12 gap-x-gutter gap-y-margin my-auto"
+    >
+        <p
+            class="text-lg lg:text-xl font-medium tracking-[-0.04em] col-span-full lg:col-span-4"
+        >
+            Hello Browser,
+        </p>
+        <p
+            class="text-lg lg:text-xl tracking-[-0.04em] text-balance max-w-md col-span-4 md:col-start-5 md:col-span-8 lg:col-start-7 lg:col-span-6"
+        >
+            I'm jdn, a frontend web developer from the UK who loves to design in
+            code and build minimalist, yet effective user experiences.
+        </p>
+    </div>
+
+    <nav
+        class="px-margin grid grid-cols-4 md:grid-cols-12 gap-x-gutter mt-auto"
+    >
         <ul
-            class="col-span-2 col-start-3 md:col-span-6 md:col-start-7 flex flex-col text-2xl lg:text-3xl font-medium tracking-[-0.04em]"
+            class="col-span-3 col-start-3 md:col-start-5 md:col-span-8 lg:col-start-7 lg:col-span-6 flex flex-col text-2xl lg:text-3xl font-medium tracking-[-0.04em]"
         >
             {#each siteLinks as link, i (i)}
                 <li
-                    class="group relative py-6 after:absolute after:bottom-0 after:left-0 after:-right-margin after:h-px after:bg-border"
+                    class="group relative py-3 lg:py-6 after:absolute after:bottom-0 after:left-0 after:-right-margin after:h-px after:bg-foreground"
                 >
                     <a
                         href={link.href}
@@ -41,12 +62,22 @@
                     </a>
                 </li>
             {/each}
+
+            <li
+                class="group relative py-3 lg:py-6 inline-flex items-center gap-3"
+            >
+                <span> Scroll down </span>
+                <RiArrowRightUpLongLine class="rotate-135" />
+            </li>
         </ul>
     </nav>
 </header>
 
 <!-- 01 Selected Work -->
-<section class="col-span-full grid grid-cols-subgrid gap-y-group">
+<section
+    class="col-span-full grid grid-cols-subgrid gap-y-group stack-panel py-margin"
+    {@attach stack}
+>
     <div class="col-span-full md:col-span-6">
         <p
             class="text-2xl lg:text-3xl font-medium tracking-[-0.04em] text-foreground-muted"
@@ -57,13 +88,13 @@
     </div>
 
     <div
-        class="col-span-full flex flex-col md:grid md:grid-cols-subgrid not-md:gap-group"
+        class="col-span-full flex flex-col md:grid md:grid-cols-subgrid not-md:gap-gutter"
     >
         <article
             class="col-start-1 col-span-2 md:col-span-6 flex flex-col gap-y-3"
         >
             <div>
-                <p class="">Stargazer</p>
+                <p>Stargazer</p>
                 <p class="text-foreground-muted">
                     Browse the vast collection of NASA imagery and data.
                 </p>
@@ -73,7 +104,7 @@
                 <img
                     src="/images/stargazer-hero-preview.webp"
                     alt="Stargazer project preview"
-                    class="aspect-4/3 object-cover"
+                    class="aspect-3/2 object-cover"
                 />
             </div>
         </article>
@@ -91,7 +122,7 @@
                 <img
                     src="/images/toolbase-hero-preview.webp"
                     alt="ToolBase project preview"
-                    class="aspect-4/3 object-cover"
+                    class="aspect-3/2 object-cover"
                 />
             </div>
         </article>
@@ -99,7 +130,10 @@
 </section>
 
 <!-- 02 Skills -->
-<section class="col-span-full grid grid-cols-subgrid gap-y-group">
+<section
+    class="col-span-full grid grid-cols-subgrid gap-y-group stack-panel pt-margin"
+    {@attach stack}
+>
     <div class="col-span-full md:col-span-6">
         <p
             class="text-2xl lg:text-3xl font-medium tracking-[-0.04em] text-foreground-muted"

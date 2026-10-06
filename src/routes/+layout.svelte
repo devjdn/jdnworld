@@ -21,11 +21,11 @@
 >
     <ModeWatcher defaultMode="system" />
 
-    <main
+    <div
         class="grid grid-cols-4 md:grid-cols-12 gap-x-gutter gap-y-section px-margin pb-section"
     >
         {@render children()}
-    </main>
+    </div>
 
     <footer class="bg-surface space-y-24">
         <div
@@ -60,7 +60,7 @@
 
         <svg
             viewBox="0 0 942 216"
-            class="block w-full h-auto col-span-full -rotate-180 text-foreground-muted"
+            class="block w-full h-auto -rotate-180 text-foreground-muted -scale-x-100"
             xmlns="http://www.w3.org/2000/svg"
         >
             <path

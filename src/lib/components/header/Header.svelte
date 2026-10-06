@@ -3,7 +3,7 @@
 </script>
 
 <header
-    class="col-span-full grid grid-cols-subgrid items-center h-12 isolate z-10 text-lg"
+    class="col-span-full grid grid-cols-subgrid items-center py-gutter isolate z-10 text-lg"
 >
     <a
         href="/"

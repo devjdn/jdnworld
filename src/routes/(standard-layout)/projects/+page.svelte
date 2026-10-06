@@ -21,14 +21,14 @@
         class="col-span-full md:col-span-6 lg:col-span-4"
     >
         <article class="flex flex-col gap-3">
-            <div class="overflow-hidden aspect-4/3 bg-surface">
+            <div class="overflow-hidden aspect-3/2 bg-surface">
                 <enhanced:img
                     src="$lib/assets/stargazer-hero-preview.webp"
                     {sizes}
                     alt="Stargazer project preview"
                     loading="eager"
                     fetchpriority="high"
-                    class="aspect-4/3 w-full object-cover"
+                    class="aspect-3/2 w-full object-cover"
                 />
             </div>
 
@@ -45,14 +45,14 @@
         class="col-span-full md:col-span-6 lg:col-span-4"
     >
         <article class="flex flex-col gap-3">
-            <div class="overflow-hidden bg-surface aspect-4/3">
+            <div class="overflow-hidden bg-surface aspect-3/2">
                 <enhanced:img
                     src="$lib/assets/toolbase-hero-preview.webp"
                     {sizes}
                     alt="ToolBase project preview"
                     loading="lazy"
                     decoding="async"
-                    class="aspect-4/3 w-full object-cover"
+                    class="aspect-3/2 w-full object-cover"
                 />
             </div>
 
@@ -67,7 +67,7 @@
     <article
         class="col-span-full md:col-span-6 lg:col-span-4 flex flex-col gap-3"
     >
-        <div class="overflow-hidden aspect-4/3 bg-surface"></div>
+        <div class="overflow-hidden aspect-3/2 bg-surface"></div>
 
         <div class="flex flex-col">
             <p>Pass the Aux</p>

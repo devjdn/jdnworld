@@ -109,6 +109,9 @@
 
     /* --- Font weight --- */
     --book: 450;
+
+    /* --- Panel stacking height --- */
+    --stack-min-height: 100svh;
 }
 
 .dark {
@@ -320,7 +323,7 @@
     --radius-sm: calc(var(--radius) * 0.6);
     --radius-md: calc(var(--radius) * 0.8);
     --radius-lg: var(--radius);
-    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-xl: calc(var(--radius) * 1.5);
     --radius-2xl: calc(var(--radius) * 1.8);
     --radius-3xl: calc(var(--radius) * 2.2);
     --radius-4xl: calc(var(--radius) * 2.6);
@@ -337,6 +340,7 @@
     /* --- Line-heights: half-unit steps (12px) so text rows add up to the grid --- */
     --text-sm--line-height: 1.5rem; /* 24px, 1u */
     --text-base--line-height: 1.5rem; /* 24px, 1u */
+    --text-lg--line-height: 1.5rem; /* 24px, 1u */
     --text-2xl--line-height: 2.25rem; /* 36px, 1.5u */
     --text-3xl--line-height: 2.25rem; /* 36px, 1.5u */
     --text-5xl--line-height: 3.75rem; /* 60px, 2.5u */
@@ -346,7 +350,29 @@
 @media (min-width: 48rem) {
     :root {
         --spacing-margin: 3rem; /* 2u */
-        --spacing-section: 12rem; /* 8u */
+        --spacing-section: 9rem; /* 6u */
+    }
+}
+
+@utility stack-panel {
+    @apply sticky top-0 isolate content-start;
+    min-height: var(--stack-min-height, 0);
+
+    &::before {
+        content: "";
+        @apply absolute inset-y-0 -left-margin -right-margin -z-10
+            bg-background;
+    }
+}
+
+@utility bleed-stack-panel {
+    @apply sticky top-0 isolate content-start;
+    min-height: var(--stack-min-height, 0);
+
+    &::before {
+        content: "";
+        @apply absolute inset-0 -z-10
+            bg-background;
     }
 }
 
@@ -379,7 +405,7 @@
         @apply overscroll-y-none;
     }
     h1 {
-        @apply font-medium tracking-[-0.04em];
+        @apply font-semibold tracking-[-0.04em];
     }
     h2 {
         @apply text-2xl lg:text-3xl font-medium tracking-[-0.04em];

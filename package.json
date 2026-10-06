@@ -16,7 +16,6 @@
     "fmt:check": "oxfmt --check"
   },
   "devDependencies": {
-    "@iconify/svelte": "^5.2.2",
     "@lucide/svelte": "^1.48.0",
     "@sveltejs/adapter-vercel": "^6.3.4",
     "@sveltejs/enhanced-img": "^0.11.0",
